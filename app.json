@@ -1,0 +1,22 @@
+{
+  "name": "legallovestech",
+  "description": "Legal Loves Tech Hackathon Website",
+  "keywords": ["react", "legal tech"],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "healthchecks": {
+    "web": [
+      {
+        "type": "startup",
+        "name": "web check",
+        "description": "Checking if the app responds to HTTP requests",
+        "path": "/",
+        "attempts": 3
+      }
+    ]
+  }
+} 

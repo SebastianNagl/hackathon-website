@@ -1,5 +1,4 @@
 {
-  "homepage": "https://tiehm.github.io/hackathon-website",
   "name": "hackathon-website",
   "description": "A very nice hackathon website made by a very angry developer.",
   "version": "0.1.0",
@@ -27,9 +26,11 @@
   "scripts": {
     "start": "serve -s build",
     "dev": "react-scripts start",
-    "build": "PUBLIC_URL=/ react-scripts build",
-    "build-homepage": "react-scripts build",
-    "gh-build": "gh-pages -d build"
+    "build": "react-scripts build",
+    "postinstall": "npm run build"
+  },
+  "engines": {
+    "node": ">=16"
   },
   "browserslist": {
     "production": [
