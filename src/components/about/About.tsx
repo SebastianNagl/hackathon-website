@@ -31,40 +31,36 @@ export class About extends React.Component<Props, {}> {
     {
       title: 'Umfassend',
       descriptionTop:
-        'Eine Kooperation sämtlicher stu&shy;dentischen Legal Tech ' +
-        'Initiativen Deutschlands.',
-      descriptionBottom: 'Der Legal Loves Tech Hackathon vereint und ' +
-        'vernetzt interessierte Studierende unter&shy;schiedlicher ' +
-        'Fach&shy;richtungen und bietet eine Plattform zum Austausch. Durch' +
-        ' das Rahmen&shy;programm ist zudem sicher&shy;gestellt, dass ' +
-        'jede:r einen Blick über den eigenen Tellerrand wagen kann.',
+        'Ein Kooperationsprojekt zwischen ML Tech e.V., der ' +
+        'Ludwig-Maximilians-Universität München (LMU) und der ' +
+        'Technischen Universität München (TUM).',
+      descriptionBottom: 'Der Legal Loves Tech Hackathon vereint und vernetzt ' +
+        'Studierende unter&shy;schiedlicher Fach&shy;richtungen und bietet ' +
+        'eine Plattform für inter&shy;disziplinäre Zusammenarbeit an der ' +
+        'Schnitt&shy;stelle von Recht und Technologie.',
       img: umfassendImg,
     },
     {
       title: 'Non Profit',
       descriptionTop:
-        'Ein standort&shy;übergreifender Zusammen&shy;schluss von ' +
-        'Universitäten und Non-<wbr>Profit‑<wbr>Organisationen' +
-        ' unter der <strong>Schirmherrschaft des Bayerischen Staatsministers' +
-        ' der Justiz Georg Eisenreich</strong>.',
+        'Eine Kooperation von Universitäten und gemeinnützigen Organisationen ' +
+        'unter der <strong>Schirmherrschaft des Bayerischen Staatsministers ' +
+        'der Justiz Georg Eisenreich, MdL</strong>.',
       descriptionBottom: 'Wir glauben, dass Legal Tech dabei helfen kann die ' +
         'Welt ein kleines Stückchen besser zu machen und möchten alle daran ' +
-        'teilhaben lassen. Im Mittelpunkt stehen daher das gemeinsame ' +
-        'Engagement und die Vermittlung von Wissen und Fähigkeiten ' +
-        'rund um Legal Tech.',
+        'teilhaben lassen. Im Mittelpunkt stehen das gemeinsame Engagement ' +
+        'und die Vermittlung von Wissen und Fähigkeiten rund um Legal Tech.',
       img: nonProfitImg,
     },
     {
       title: 'Interdisziplinär',
-      descriptionTop: 'Betreuung und Unterricht durch führende Expert:innen ' +
-        'und Dozierende aus den Bereichen <strong>Start Up, ' +
-        'Rechtswissenschaft und Technik</strong>.',
-      descriptionBottom: 'Egal auf wie viel Vorwissen die Teams aufbauen ' +
-        'können und aus welchen Disziplinen sie kommen, alle erhalten die ' +
-        'notwendigen Kenntnisse in den Bereichen Recht und Tech durch ein ' +
-        'umfassendes Workshop-Programm. Abgerundet durch Help Desks und eine ' +
-        'engagierte Slack-Community findet jede:r einen Zugang zum Thema ' +
-        'Legal Tech.',
+      descriptionTop: 'Vorträge, Workshops und Praxis&shy;einblicke von ' +
+        'führenden Expert:innen aus <strong>Recht, Technologie ' +
+        'und Wirtschaft</strong>.',
+      descriptionBottom: 'Egal auf wie viel Vorwissen die Teams aufbauen – ' +
+        'alle erforderlichen Kenntnisse werden direkt im Rahmen der ' +
+        'Hackathon-Woche vermittelt. Vorkenntnisse im Bereich Legal Tech ' +
+        'sind ausdrücklich keine Voraussetzung.',
       img: betreuungImg,
     },
   ];
@@ -72,7 +68,7 @@ export class About extends React.Component<Props, {}> {
   render() {
     return <div
       id="about-page"
-      className="h-screen relative flex justify-center items-center bg-blue-3"
+      className="min-h-screen relative flex justify-center items-center bg-blue-3"
     >
       <div className={'absolute top-4 right-0 rounded-l z-10 bg-blue-12 ' +
           'text-blue-1 text-3xl px-16 py-4 ' +

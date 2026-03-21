@@ -40,4 +40,48 @@
     background-repeat: no-repeat;
 }
 
+.placeholder-pic {
+    background-color: #c8d8e8;
+}
 
+.felicitas-pic {
+    background: url("../../img/teamMembers/felicitas_bingger.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.luca-pic {
+    background: url("../../img/teamMembers/luca_ballmann.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.enci-pic {
+    background: url("../../img/teamMembers/enci_huang.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.annkristin-pic {
+    background: url("../../img/teamMembers/ann-kristin_mayrhofer.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nikolaus-pic {
+    background: url("../../img/teamMembers/nikolaus_bauer.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tristan-pic {
+    background: url("../../img/teamMembers/tristan_radtke.webp") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.niklas-pic {
+    background: url("../../img/teamMembers/niklas_wais.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

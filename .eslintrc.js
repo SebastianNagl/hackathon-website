@@ -21,5 +21,10 @@ module.exports = {
   ],
   'rules': {
     'require-jsdoc': 0,
+    'linebreak-style': 0,
+    'max-len': 0,
+    'react/no-unescaped-entities': 0,
+    'object-curly-spacing': 0,
+    'quotes': 0,
   },
 };

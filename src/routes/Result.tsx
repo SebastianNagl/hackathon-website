@@ -1,26 +1,75 @@
 import classNames from 'classnames';
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {Footer} from '../components/footer/Footer';
 import GroupPicture from '../img/group_picture.png';
 
 export class Result extends React.Component {
   render() {
     return (<div className="overflow-x-hidden">
-      <div className={classNames('min-h-screen flex w-full' +
-        ' justify-center items-center mb-10 mt-40')}>
-        <div className="text-left text-blue-12 flex
-        flex-col gap-6 w-4/5 md:w-2/3 max-w-[800px] mx-auto">
+
+      {/* Sub-Startseite */}
+      <div className={classNames('flex w-full justify-center mt-28 mb-10')}>
+        <div className="text-left text-blue-12 flex flex-col gap-8
+          w-4/5 md:w-2/3 max-w-[800px] mx-auto">
+
           <div>
-            <h1 className={classNames('text-2xl font-bold mb-2')}>
+            <h1 className={'text-3xl font-bold mb-2'}>
               Legal Loves Tech Hackathon 2023
             </h1>
-            <h1 className={classNames('text-xl font-semibold')}>
-              „ComplAI“ gewinnt bundesweit größten Hackathon im Bereich Legal
-              Tech
-            </h1>
+            <p className={'text-xl text-blue-11 opacity-70'}>
+              Recap &amp; Rückblick
+            </p>
           </div>
-          <img src={GroupPicture} alt="Bild vom Hackathon" className={'my-4'}/>
+
+          <img src={GroupPicture} alt="Bild vom Hackathon" className={'rounded'}/>
+
+          {/* Navigationskacheln */}
+          <div className={'grid grid-cols-1 sm:grid-cols-3 gap-4'}>
+            <Link to={'/result/team'}
+              className={'bg-blue-3 p-6 rounded-lg border border-blue-12' +
+                ' border-opacity-20 hover:bg-blue-4 transition-colors group'}>
+              <div className={'font-bold text-lg mb-2 group-hover:text-blue-11' +
+                ' transition-colors'}>
+                Team 2023
+              </div>
+              <div className={'text-sm opacity-70'}>
+                Das Organisationsteam hinter dem LLT 2023
+              </div>
+            </Link>
+            <Link to={'/result/jury'}
+              className={'bg-blue-3 p-6 rounded-lg border border-blue-12' +
+                ' border-opacity-20 hover:bg-blue-4 transition-colors group'}>
+              <div className={'font-bold text-lg mb-2 group-hover:text-blue-11' +
+                ' transition-colors'}>
+                Jury 2023
+              </div>
+              <div className={'text-sm opacity-70'}>
+                Die Expert:innen, die die Finalteams bewertet haben
+              </div>
+            </Link>
+            <Link to={'/result/event'}
+              className={'bg-blue-3 p-6 rounded-lg border border-blue-12' +
+                ' border-opacity-20 hover:bg-blue-4 transition-colors group'}>
+              <div className={'font-bold text-lg mb-2 group-hover:text-blue-11' +
+                ' transition-colors'}>
+                Ablaufplan
+              </div>
+              <div className={'text-sm opacity-70'}>
+                Programm und Timetable des LLT 2023
+              </div>
+            </Link>
+          </div>
+
+          {/* Trennlinie */}
+          <div className={'w-full h-px bg-blue-12 opacity-20'} />
+
+          {/* Vollständiger Wochenbericht */}
           <div className={classNames('flex flex-col gap-4')}>
+            <h2 className={classNames('text-xl font-semibold')}>
+              „ComplAI" gewinnt bundesweit größten Hackathon im Bereich Legal
+              Tech
+            </h2>
             <p className={'text-justify'}>
               Eine Woche voller Legal Tech für jedermann – so lautete das
               ambitionierte Ziel des Legal Loves Tech Hackathons (LLT), der vom
@@ -81,7 +130,7 @@ export class Result extends React.Component {
               Teilnehmenden einen Blick auf die Möglichkeiten von Open Source
               Software für die eigene Produktentwicklung. Der rechtliche Vortrag
               des Tages befasste sich mit dem Geschäftsmodell von sog.
-              „Abmahnanwälten“, die Abmahnungen in großer Zahl verschicken und
+              „Abmahnanwälten", die Abmahnungen in großer Zahl verschicken und
               dabei teils auf Automatisierung zurückgreifen, und welche
               (technischen) Möglichkeiten bestehen, Laien bei der Abwehr der
               teilweise ungerechtfertigten Abmahnungen zu unterstützen.
@@ -94,7 +143,7 @@ export class Result extends React.Component {
             <p className={'text-justify'}>
               Am Donnerstag konzentrierten sich die Teams nochmals auf die
               Kernthemen: Legal und Tech. Dirk Heckmann beleuchtete unter dem
-              Titel „Gemeinfrei und Gemeinwohl“, welche Daten durch Legal Tech
+              Titel „Gemeinfrei und Gemeinwohl", welche Daten durch Legal Tech
               Anwendungen problemlos genutzt werden können und wo es aus
               urheberrechtlichen Gründen knifflig werden kann. Sebastian Nagl
               versammelte das engagierte Teilnehmerfeld zudem in seinem zweiten
@@ -106,7 +155,7 @@ export class Result extends React.Component {
               Mit dem fünften Tag des LLT Hackathons folgte der letzte
               inhaltlich intensive Tag für die Teams. Neben dem letzten Teil des
               Coding Kurses folgten mit den Vorträgen von Matthias Grabmair
-              („Data driven work for lawyers“) und Ann-Kristin Mayrhofer zu
+              („Data driven work for lawyers") und Ann-Kristin Mayrhofer zu
               elektronischen Postfächern nochmals echte Highlights. Darüber
               hinaus lud das Liquid Legal Institute am Abend zu einem zwanglosen
               Austausch am digitalen open table ein.
@@ -140,7 +189,7 @@ export class Result extends React.Component {
             </p>
             <p className={'text-justify'}>
               Der <strong>erste Platz </strong>
-              ging an das <strong>Team „ComplAI“</strong>,
+              ging an das <strong>Team „ComplAI"</strong>,
               die mit ihrer Lösung auf die Probleme kleinerer Unternehmen
               eingingen. Damit diese stets den Überblick über
               Gesetzesänderungen, anstehende Neuregulierungen und für sie
@@ -153,7 +202,7 @@ export class Result extends React.Component {
             </p>
             <p className={'text-justify'}>
               <strong>Platz zwei</strong> konnte sich das
-              <strong> Team „LiKA“</strong> sichern,
+              <strong> Team „LiKA"</strong> sichern,
               die
             einen <strong>Lieferkettenassistenten</strong> zur
             Bewältigung der durch das
@@ -212,6 +261,7 @@ export class Result extends React.Component {
               Schirmherrn schließen.
             </p>
           </div>
+
         </div>
       </div>
 

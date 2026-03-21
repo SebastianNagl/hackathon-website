@@ -23,7 +23,7 @@ export class Greeting extends React.Component {
           id={'small-heart-background'}
           className={'w-full h-full absolute fadeIn delay-1'}/>
 
-        <div className={'scale-greeting'}>
+        <div className={'scale-greeting relative'}>
           <div className={'font-medium text-blue-12 text-4xl text-left '+
               'tabletL:pl-10 smDesktop:text-5xl lg:text-7xl'}>
             Legal Tech

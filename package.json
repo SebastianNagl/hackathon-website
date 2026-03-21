@@ -26,7 +26,7 @@
   "scripts": {
     "start": "serve -s build",
     "dev": "react-scripts start",
-    "build": "NODE_OPTIONS=--max_old_space_size=2048 GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=2048 GENERATE_SOURCEMAP=false react-scripts build",
     "postinstall": "npm run build"
   },
   "engines": {
@@ -50,6 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "autoprefixer": "^10.4.4",
+    "cross-env": "^10.1.0",
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.29.4",
