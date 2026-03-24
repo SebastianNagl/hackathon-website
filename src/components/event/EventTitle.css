@@ -1,8 +1,7 @@
-/* places the two hearts relative to the event title, nothing else needed as the
-   width of the title never changes so responsiveness is not an issue */
+/* places the two hearts relative to page subheaders */
 
 @media (min-width: 810px) {
-    #event-hearts::after {
+    .page-subheader::after {
         position: absolute;
         top: -40%;
         transform: scale(40%);
@@ -13,7 +12,7 @@
 }
 
 @media (max-width: 810px) {
-    #event-hearts::after {
+    .page-subheader::after {
         position: absolute;
         top: -40%;
         transform: scale(90%);

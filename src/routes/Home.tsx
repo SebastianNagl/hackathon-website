@@ -1,6 +1,7 @@
 import React from 'react';
 import {About} from '../components/about/About';
 import {Footer} from '../components/footer/Footer';
+import {AccessToJustice} from '../components/info/AccessToJustice';
 import {Info} from '../components/info/Info';
 import {MediaPartners} from '../components/mediapartners/Partners';
 import {Partners} from '../components/partners/Partners';
@@ -25,6 +26,7 @@ export class Home extends React.Component {
   render() {
     return <div className={`App overflow-x-hidden`}>
       <Info scrollTo={this.scrollTo} />
+      <AccessToJustice />
       <About scrollTo={this.scrollTo} />
       <Testimonials scrollTo={this.scrollTo} />
       <Partners />

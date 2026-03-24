@@ -1,113 +1,163 @@
 import React from 'react';
 import {Footer} from '../components/footer/Footer';
+import '../components/event/EventTitle.css';
 import {TeamCard} from '../components/team/TeamCard';
+import mltechLogo from '../img/partners/org_munich.png';
+import lmuLogo from '../img/partners/lmu.png';
+import tumLogo from '../img/partners/TUM_good.svg';
+import lltLogo from '../img/lltLogos/logo-colored.svg';
 
-// TeamMember holds the information about a team member to show on the team page
 type TeamMember = {
-    // full name of the team member
     name: string
-    // the description of their job / whatever they say about themselves
-    details: string
-    // the email under which someone can contact that team member
-    email: string
-    // if present, the linked in profile of the team member
-    linkedIn?: string
-    // a minimal description about the team member, like: "HR Person"
     shortDesc: string
-    // the background class references the css class which has the correct
-    // image of the person in the background (found in TeamCard.css)
+    email?: string
+    linkedIn?: string
     backgroundClass: string
 }
 
+type TeamGroup = {
+    label: string
+    logo: string
+    members: TeamMember[]
+}
+
 export class Team extends React.Component {
-  private teamMembers: TeamMember[]= [
+  private teamGroups: TeamGroup[] = [
     {
-      name: 'Sebastian Nagl',
-      shortDesc: 'Initiator & Junge für Alles',
-      email: 'hallo@legallovestech.de',
-      linkedIn: 'https://www.linkedin.com/in/sebastian-nagl-94b276162/',
-      backgroundClass: 'basti-pic',
-      details: 'Kümmert sich um Content und Branding des Legal ❤ Tech, und ' +
-          'alles, was sonst noch so anfällt. Daneben der beste ' +
-          'Dungeons & Dragons Gamemaster und begeisterter Rennrad-Fahrer.',
+      label: 'Team MLTech',
+      logo: mltechLogo,
+      members: [
+        {
+          name: 'Felicitas Bingger',
+          shortDesc: 'Vorstandsvorsitzende',
+          email: 'felicitas.bingger@ml-tech.org',
+          linkedIn: 'https://www.linkedin.com/in/felicitas-bingger-897b3b332/',
+          backgroundClass: 'felicitas-pic',
+        },
+        {
+          name: 'Luca Ballmann',
+          shortDesc: 'Vorstandsvorsitzender',
+          email: 'luca.ballmann@ml-tech.org',
+          linkedIn: 'https://www.linkedin.com/in/luca-j-ballmann-50807023b/',
+          backgroundClass: 'luca-pic',
+        },
+        {
+          name: 'Enci Huang',
+          shortDesc: 'Koordinator Hackathon',
+          email: 'enci.huang@ml-tech.org',
+          linkedIn: 'https://www.linkedin.com/in/enci-huang-%E9%BB%83%E6%81%A9%E8%B3%9C-14009b229/',
+          backgroundClass: 'enci-pic',
+        },
+      ],
     },
     {
-      name: 'Sarah Rachut',
-      shortDesc: 'Strategy & Memes',
-      email: 'event@legallovestech.de',
-      linkedIn: 'https://www.linkedin.com/in/sarah-rachut/',
-      backgroundClass: 'sarah-pic',
-      details: 'Interessiert sich für die großen Fragen von Recht und ' +
-          'Digitalisierung und bemüht sich um einen möglichst großen Impact ' +
-          'des Legal ❤ Tech Hackathons. Wenn sie nicht in den Untiefen des ' +
-          'Internets herumstöbert findet man sie im Zweifel am Buffet.',
+      label: 'Team LMU',
+      logo: lmuLogo,
+      members: [
+        {
+          name: 'Dr. Ann-Kristin Mayrhofer',
+          shortDesc: 'Akademische Rätin a. Z. · LMU, Lehrstuhl für ' +
+            'Bürgerliches Recht, Zivilverfahrensrecht, Europäisches ' +
+            'Privat- und Verfahrensrecht',
+          email: 'annkristin.mayrhofer@jura.uni-muenchen.de',
+          linkedIn: 'https://www.linkedin.com/in/ann-kristin-mayrhofer-983235239/',
+          backgroundClass: 'annkristin-pic',
+        },
+        {
+          name: 'Nikolaus Bauer',
+          shortDesc: 'Wiss. Mit. · LMU / Rechtsinformatikzentrum',
+          email: 'nikolaus.bauer@jura.uni-muenchen.de',
+          linkedIn: 'https://www.linkedin.com/in/nikolaus-bauer-415567311/',
+          backgroundClass: 'nikolaus-pic',
+        },
+      ],
     },
     {
-      name: 'Muskaan Multani',
-      shortDesc: 'Eventkoordination',
-      email: 'event@legallovestech.de',
-      linkedIn: 'https://www.linkedin.com/in/muskaan-multani-987873184/',
-      backgroundClass: 'muskaan-pic',
-      details: 'Organisiert die Vorträge und Workshops für den Legal ❤ Tech ' +
-          'Hackathon. Ansonsten besucht Sie selbst gerne Events und hat eine ' +
-          'große Leidenschaft für die Formel 1.',
+      label: 'Team TUM',
+      logo: tumLogo,
+      members: [
+        {
+          name: 'Dr. Tristan Radtke',
+          shortDesc: 'Akademischer Rat a. Z. · TUM, Lehrstuhl für Law and ' +
+            'Regulation of the Digital Transformation (SOT)',
+          email: 'tristan.radtke@tum.de',
+          linkedIn: 'https://www.linkedin.com/in/tristan-radtke/',
+          backgroundClass: 'tristan-pic',
+        },
+        {
+          name: 'Niklas Wais',
+          shortDesc: 'Wiss. Mit. · Lehrstuhl für Legal Tech (CIT)',
+          email: 'niklas.wais@tum.de',
+          linkedIn: 'https://www.linkedin.com/in/niklas-wais/',
+          backgroundClass: 'niklas-pic',
+        },
+      ],
     },
     {
-      name: 'Ann-Sophie Blaser',
-      shortDesc: 'Teilnehmer:innen & Initiativen',
-      email: 'hallo@legallovestech.de',
-      linkedIn: 'https://www.linkedin.com/in/ann-sophie-blaser-a9706b222/',
-      backgroundClass: 'ann-sophie-pic',
-      details: 'Koordiniert die Zusammenarbeit mit den Legal Tech ' +
-          'Initiativen Deutschlands und kümmert sich um die ' +
-          'Teilnehmer:innen. In der Freizeit Gamerin und Bücherwurm.',
-    },
-    {
-      name: 'Fabian Wiedemann',
-      shortDesc: 'Hochschulkontakte',
-      email: 'kooperation@legallovestech.de',
-      linkedIn: 'https://www.linkedin.com/in/fabian-wiedemann/',
-      backgroundClass: 'fabian-pic',
-      details: 'Kümmert sich um die Verbreitung des Events als Teil ' +
-        'universitärer Lehre. Interessiert sich für Coding genauso wie für ' +
-        'Serienklassiker wie Rick and Morty, The Office und Community.',
-    },
-    {
-      name: 'Charlie Tiehm',
-      shortDesc: 'Developer',
-      email: 'hallo@legallovestech.de',
-      backgroundClass: 'charlie-pic',
-      details: 'Programmiert jede Idee aus, die nicht bei drei auf\'m' +
-          ' Baum ist. Kümmert sich vor allem um die Website und' +
-          ' technische Aufgaben im Hintergrund.',
+      label: 'Gründer',
+      logo: lltLogo,
+      members: [
+        {
+          name: 'Sebastian Nagl',
+          shortDesc: 'Gründer',
+          linkedIn: 'https://www.linkedin.com/in/sebastian-nagl-94b276162/',
+          backgroundClass: 'basti-pic',
+        },
+      ],
     },
   ];
 
   render() {
-    return (<div className="overflow-x-hidden">
-      <div className={'min-h-screen flex bg-red-3 w-full justify-center ' +
-          'items-center mb-10'}>
-        <div className={'container p-10 grid grid-cols-1 sm:grid-cols-2 ' +
-            'lg:grid-cols-3 gap-8 min-h-full flex ' +
-            'justify-center items-center mt-24 tabletL:mt-28 lg:mt-32 xl:mt-36'}
-        >
+    return (<div className="overflow-x-hidden min-h-screen flex flex-col">
+      <div className={'flex flex-col grow pt-8 mt-28 tabletL:mt-32 xl:mt-36 ' +
+        'bg-red-3 pb-16'}>
 
-          {this.teamMembers.map((partner, index) =>
-            <TeamCard
-              key={index}
-              details={partner.details}
-              backgroundClass={partner.backgroundClass}
-              email={partner.email}
-              name={partner.name}
-              shortDesc={partner.shortDesc}
-              linkedIn={partner.linkedIn} />,
-          )}
-
+        <div className={'page-subheader text-head-m font-medium text-blue-1 ' +
+          'bg-blue-12 rounded-r py-6 pl-6 pr-14 w-fit relative mb-8'}>
+          Team
         </div>
+
+        {this.teamGroups.map((group, gi) => (
+          <div key={gi} className={'mb-16 px-6 lg:w-4/5 lg:mx-auto'}>
+
+            {/* Gruppen-Header mit Logo */}
+            <div className={'flex items-center gap-4 mb-8'}>
+              <img
+                src={group.logo}
+                alt={group.label}
+                className={'h-10 w-auto object-contain'}
+              />
+              <h2 className={'text-head-m font-bold text-blue-12'}>
+                {group.label}
+              </h2>
+            </div>
+
+            {/* Karten-Grid */}
+            <div className={'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' +
+              ' gap-8'}>
+              {group.members.map((member, mi) => (
+                <TeamCard
+                  key={mi}
+                  name={member.name}
+                  shortDesc={member.shortDesc}
+                  email={member.email}
+                  linkedIn={member.linkedIn}
+                  backgroundClass={member.backgroundClass}
+                />
+              ))}
+            </div>
+
+            {/* Trennlinie zwischen Gruppen */}
+            {gi < this.teamGroups.length - 1 && (
+              <div className={'w-full h-px bg-blue-12 opacity-20 mt-16'} />
+            )}
+
+          </div>
+        ))}
+
       </div>
 
       <Footer backgroundColor={'blue'}/>
-
     </div>);
   }
 }

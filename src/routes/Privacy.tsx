@@ -4,11 +4,12 @@
 // considered strictly
 
 import React from 'react';
+import {Footer} from '../components/footer/Footer';
 
 export class Privacy extends React.Component {
   render() {
-    return <div className={'min-h-screen bg-red-1 flex justify-center items-center'}>
-      <div className={'w-4/5 mx-auto mt-40 p-8'}>
+    return <div className={'min-h-screen bg-red-1 flex flex-col'}>
+      <div className={'w-4/5 mx-auto mt-40 p-8 grow'}>
         <h1 id="-1-pr-ambel-"><strong>1) Präambel</strong></h1>
         <p>Liebe Besucher unserer Internetseite, als Anbieter von legallovestech.de sind wir gesetzlich verpflichtet, Sie über Zweck, Umfang und Art der Erhebung sowie der Verwendung Ihrer personenbezogenen Daten aufzuklären. Damit Sie ein Gefühl dafür bekommen, auf welche Art und Weise wir Daten erheben, verarbeiten und nutzen, möchten wir Ihnen nachfolgend einen Überblick geben. Wir möchten Ihnen erläutern, welche Daten wir wann, zu welchem Zweck und auf welcher Rechtsgrundlage verarbeiten und wie die Datenverarbeitung auf unserer Seite verläuft.</p>
         <p>Zunächst möchten wir Sie aufklären, was personenbezogene Daten sind: Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen, Art. 4 Nr. 1 DSGVO. Als identifizierbar gilt eine natürliche Person, die direkt oder indirekt identifiziert werden kann.</p>
@@ -54,6 +55,7 @@ export class Privacy extends React.Component {
         <p>Wenn Sie Fragen zur Verarbeitung Ihrer personenbezogenen Daten oder Ihren Rechten bezüglich des Datenschutzes haben, wenden Sie sich gerne an hallo@legalloestech.de.</p>
 
       </div>
+      <Footer backgroundColor={'red'} />
     </div>;
   }
 }

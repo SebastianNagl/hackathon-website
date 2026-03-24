@@ -10,7 +10,7 @@ interface Props {
 export class TestimonialSwiper extends React.Component<Props, {}> {
   render() {
     return <div className="w-3/4 md:w-2/3 h-full mx-auto ">
-      <div className={'w-full my-20 relative h-full flex' +
+      <div className={'w-full mt-16 mb-0 relative h-full flex' +
         ' flex-col justify-center align-middle items-center'}>
         <div className={classNames('absolute xl:top-20' +
           ' sm:top-1/4 -translate-y-1/2' +
@@ -42,8 +42,7 @@ export class TestimonialSwiper extends React.Component<Props, {}> {
           ' flex' +
           ' justify-center align-center items-center',
           this.props.testimonial.isTooBig ? 'h-3/4' : 'h-2/3')}>
-          <div className={'md:w-3/4 w-11/12 text-center md:pt-0' +
-            ' pt-4'}>
+          <div className={'md:w-3/4 w-11/12 text-center py-8'}>
             <div className={classNames('text-left mx-auto w-10/12' +
               ' testimonial-text',
               this.props.testimonial.isTooBig ?

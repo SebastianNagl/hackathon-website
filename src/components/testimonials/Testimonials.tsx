@@ -152,7 +152,7 @@ export class Testimonials extends React.Component<Props, {}> {
     return (
       <div
         id='testimonials'
-        className='h-screen relative flex justify-center items-center'
+        className='relative flex justify-center items-center bg-blue-2 pb-2'
       >
         <div
           className={
@@ -160,11 +160,11 @@ export class Testimonials extends React.Component<Props, {}> {
             'text-blue-1 text-3xl px-20 py-6'
           }
         >
-          What Others Say
+          Testimonials
         </div>
         <div
           className={
-            'w-full h-5/6 py-4 flex justify-center items-center md:px-4'
+            'w-full h-5/6 py-4 pt-24 flex justify-center items-center md:px-4'
           }
         >
           <div className={'block w-full h-full py-4 relative'}>

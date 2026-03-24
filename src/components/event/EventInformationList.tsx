@@ -3,32 +3,29 @@ import React from 'react';
 export class EventInformationList extends React.Component {
   informationList: string[] = [
 
-    'Das Event findet in der ersten Januarwoche 2023 voll remote statt,' +
-      ' also vom 02.01.2023 bis einschließlich 08.01.2023.',
+    'Der Legal Loves Tech Hackathon 2026 findet vom 17. bis 21. August 2026' +
+    ' in Präsenz in München statt. Der abschließende Präsentationstag ist' +
+    ' für den 27. August 2026 vorgesehen.',
 
-    'Zugelassen werden Teams von bis zu 6 Personen. Alle Teilnehmer:innen' +
-    ' sollten sich noch in Studium / Referendariat befinden. Es werden' +
-    ' dauerhaft Zoom-Räume sowie eine Infrastruktur über Slack zur Verfügung' +
-    ' gestellt, die bei Interesse genutzt werden können. Daneben existieren' +
-    ' je ein juristischer und technischer Helpdesk!',
+    'Die Teilnahme ist kostenfrei. Vorkenntnisse im Bereich Legal Tech sind' +
+    ' keine Voraussetzung – das gesamte erforderliche Wissen wird direkt im' +
+    ' Rahmen der Hackathon-Woche vermittelt.',
 
-    'Das Event richtet sich nicht ausschließlich an Jurist:innen;' +
-    ' interdisziplinäre Teams sind ausdrücklich erwünscht!',
+    'Der Hackathon richtet sich an Studierende der TUM und der LMU.' +
+    ' LMU-Studierende melden sich über das LSF an, TUM-Studierende über' +
+    ' TUM SOT (Modul SOT82137) und TUM CIT (Modulcode folgt). TUM-Studierende können die Teilnahme mit' +
+    ' 3 ECTS-Credits als Bachelor-Modul anrechnen lassen. An der LMU wird' +
+    ' der Hackathon als Grundlagenseminar und Wahlpflichtmodul im' +
+    ' Zertifikatsstudiengang Rechtsinformatik angeboten.',
 
-    'Zu Beginn des Events bekommen alle zugelassenen Teams entweder eine' +
-    ' Aufgabe zugeteilt, oder die Teams bringen eine eigene Aufgabe mit,' +
-    ' an der sie im Lauf des Hackathons arbeiten möchten.' +
-    ' Eigene Aufgabenstellungen sind ausdrücklich erlaubt!',
+    'Das Format fördert ausdrücklich interdisziplinäre Teams aus' +
+    ' Rechtswissenschaft, Informatik und Wirtschaftswissenschaften.',
 
-    'Im Lauf der Woche finden Vorträge und Workshops führender Expert:innen' +
-    ' statt, deren Teilnahme nicht verpflichtend ist. In diesen Einheiten ' +
-    'werden sämtliche Fähigkeiten vermittelt, die notwendig sind, um die ' +
-    'Aufgaben zu lösen und einen Einblick in die entsprechenden Bereiche ' +
-    'zu erlangen.',
+    'Die Teameinteilung findet am ersten Tag des Hackathons statt.',
 
-    'Am Ende der Woche bewertet eine Jury die Prototypen, die die Teams im' +
-    ' Laufe der Woche entwickelt haben. Das Siegerteam kann sich über einen' +
-    ' Geldpreis i.H.v. € 2.500,‑ freuen!',
+    'Am Ende der Woche präsentieren die Teams ihre Legal-Tech-Lösungen vor' +
+    ' einer interdisziplinären Fachjury. Die drei besten Teams werden mit' +
+    ' einem Preisgeld sowie einer Urkunde und einem Pokal ausgezeichnet.',
 
   ];
 
