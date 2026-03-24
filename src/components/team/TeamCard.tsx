@@ -6,7 +6,7 @@ import './TeamCard.css';
 
 type Props = {
     name: string
-    email: string
+    email?: string
     linkedIn?: string
     shortDesc: string
     backgroundClass: string
@@ -28,14 +28,16 @@ export class TeamCard extends React.Component<Props> {
         </div>
         <div className={classNames(
             'flex items-center mx-auto mt-2',
-            this.props.linkedIn ? 'justify-around w-2/5' : 'justify-center',
+            this.props.email && this.props.linkedIn ? 'justify-around w-2/5' : 'justify-center',
         )}>
-          <a
-            href={'mailto:' + this.props.email}
-            target="_blank"
-            rel="noreferrer">
-            <img className="h-7 w-auto" src={mailIcon} alt="Email"/>
-          </a>
+          {this.props.email &&
+            <a
+              href={'mailto:' + this.props.email}
+              target="_blank"
+              rel="noreferrer">
+              <img className="h-7 w-auto" src={mailIcon} alt="Email"/>
+            </a>
+          }
           {this.props.linkedIn &&
             <a
               href={this.props.linkedIn}

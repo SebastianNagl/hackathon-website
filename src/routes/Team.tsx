@@ -10,7 +10,7 @@ import lltLogo from '../img/lltLogos/logo-colored.svg';
 type TeamMember = {
     name: string
     shortDesc: string
-    email: string
+    email?: string
     linkedIn?: string
     backgroundClass: string
 }
@@ -100,7 +100,6 @@ export class Team extends React.Component {
         {
           name: 'Sebastian Nagl',
           shortDesc: 'Founder & Advisor',
-          email: 'hallo@legallovestech.de',
           linkedIn: 'https://www.linkedin.com/in/sebastian-nagl-94b276162/',
           backgroundClass: 'basti-pic',
         },

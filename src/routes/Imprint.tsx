@@ -4,18 +4,19 @@
 // considered strictly
 
 import React from 'react';
+import {Footer} from '../components/footer/Footer';
 
 export class Imprint extends React.Component {
   render() {
-    return <div className={'min-h-screen bg-red-1 flex justify-center items-center'}>
-      <div className={'w-4/5 mx-auto mt-40 p-8'}>
+    return <div className={'min-h-screen bg-red-1 flex flex-col'}>
+      <div className={'w-4/5 mx-auto mt-40 p-8 grow'}>
         <div className={'py-6'}>
           <p>Angaben gemäß § 5 TMG</p>
-          <p>Legallovestech</p>
-          <p>z. Hd. Sebastian Nagl</p>
-          <p>Prof-Huber-Platz 2</p>
-          <p>80530 Muenchen</p>
-          <p>E-Mail: hallo@legallovestech.de</p>
+          <p>Enci Huang</p>
+          <p>Munich Legal Tech Student Association e. V.</p>
+          <p>Landwehrstraße 17</p>
+          <p>80336 München</p>
+          <p>E-Mail: hackathon@ml-tech.org</p>
         </div>
         <p>Dieses Impressum gilt auch für unsere Social-Media-Präsenzen</p>
         <p>Bildernachweis</p>
@@ -32,6 +33,7 @@ export class Imprint extends React.Component {
         <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>.Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
       </div>
+      <Footer backgroundColor={'red'} />
     </div>;
   }
 }
