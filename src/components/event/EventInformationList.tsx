@@ -13,7 +13,7 @@ export class EventInformationList extends React.Component {
 
     'Der Hackathon richtet sich an Studierende der TUM und der LMU.' +
     ' LMU-Studierende melden sich über das LSF an, TUM-Studierende über' +
-    ' TUM SOT und TUM CIT. TUM-Studierende können die Teilnahme mit' +
+    ' TUM SOT (Modul SOT82137) und TUM CIT (Modulcode folgt). TUM-Studierende können die Teilnahme mit' +
     ' 3 ECTS-Credits als Bachelor-Modul anrechnen lassen. An der LMU wird' +
     ' der Hackathon als Grundlagenseminar und Wahlpflichtmodul im' +
     ' Zertifikatsstudiengang Rechtsinformatik angeboten.',

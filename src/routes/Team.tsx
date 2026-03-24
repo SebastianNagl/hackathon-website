@@ -79,14 +79,14 @@ export class Team extends React.Component {
         {
           name: 'Dr. Tristan Radtke',
           shortDesc: 'Akademischer Rat a. Z. · TUM, Lehrstuhl für Law and ' +
-            'Regulation of the Digital Transformation',
+            'Regulation of the Digital Transformation (SOT)',
           email: 'tristan.radtke@tum.de',
           linkedIn: 'https://www.linkedin.com/in/tristan-radtke/',
           backgroundClass: 'tristan-pic',
         },
         {
           name: 'Niklas Wais',
-          shortDesc: 'Wiss. Mit. · Lehrstuhl für Legal Tech',
+          shortDesc: 'Wiss. Mit. · Lehrstuhl für Legal Tech (CIT)',
           email: 'niklas.wais@tum.de',
           linkedIn: 'https://www.linkedin.com/in/niklas-wais/',
           backgroundClass: 'niklas-pic',

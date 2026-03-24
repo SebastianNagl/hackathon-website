@@ -47,7 +47,25 @@ export class Join extends React.Component {
                 />
                 <p className={'text-text-m lg:text-text-l text-blue-12 text-center'}>
                   TUM-Studierende melden sich über{' '}
-                  <strong>TUM SOT</strong> oder <strong>TUM CIT</strong> an.
+                  <strong>TUM SOT</strong> (Modul{' '}
+                  <a
+                    href={'https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=4715303&pOrgNr=52498'}
+                    className={'underline font-semibold'}
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                  >
+                    SOT82137
+                  </a>
+                  ,{' '}
+                  <a
+                    href={'https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/registrationProcedures/76490?$ctx=&courseId=950889530'}
+                    className={'underline font-semibold'}
+                    target={'_blank'}
+                    rel={'noreferrer'}
+                  >
+                    zur Anmeldung
+                  </a>
+                  ) oder <strong>TUM CIT</strong> (Modulcode folgt) an.
                 </p>
               </div>
 
