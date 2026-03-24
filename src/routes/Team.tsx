@@ -94,12 +94,12 @@ export class Team extends React.Component {
       ],
     },
     {
-      label: 'Founder & Advisor',
+      label: 'Gründer',
       logo: lltLogo,
       members: [
         {
           name: 'Sebastian Nagl',
-          shortDesc: 'Founder & Advisor',
+          shortDesc: 'Gründer',
           linkedIn: 'https://www.linkedin.com/in/sebastian-nagl-94b276162/',
           backgroundClass: 'basti-pic',
         },

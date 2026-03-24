@@ -109,6 +109,7 @@ export class Footer extends React.Component<Props, {}> {
           'lg:gap-14'}>
         <a href={'/datenschutz'}>Datenschutzerklärung</a>
         <a href={'/impressum'}>Impressum</a>
+        <span>&copy; Copyright <a href={'https://legalplusplus.net'} target={'_blank'} rel={'noopener noreferrer'} className={'font-bold hover:underline'}>pschOrr95</a> 2026. Alle Rechte vorbehalten.</span>
       </div>
 
     </div>;

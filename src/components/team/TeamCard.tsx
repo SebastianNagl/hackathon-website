@@ -14,20 +14,20 @@ type Props = {
 
 export class TeamCard extends React.Component<Props> {
   render() {
-    return <div className="bg-blue-2 rounded relative select-none 2xl:h-[400px]">
+    return <div className="bg-blue-2 rounded relative select-none flex flex-col h-full">
       <div
-        className={'w-full h-60 2xl:h-[80%] rounded-t ' +
+        className={'w-full h-60 rounded-t flex-shrink-0 ' +
           this.props.backgroundClass}>
       </div>
-      <div className="text-center p-4 bg-blue-2 bg-opacity-10 rounded-b">
+      <div className="text-center p-4 pb-5 bg-blue-2 rounded-b flex flex-col flex-grow">
         <div className="font-semi-bold">
           {this.props.name}
         </div>
-        <div className="text-sm opacity-80 mb-3">
+        <div className="text-sm opacity-80">
           {this.props.shortDesc}
         </div>
         <div className={classNames(
-            'flex items-center mx-auto mt-2',
+            'flex items-center mx-auto mt-auto pt-3',
             this.props.email && this.props.linkedIn ? 'justify-around w-2/5' : 'justify-center',
         )}>
           {this.props.email &&
