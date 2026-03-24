@@ -261,7 +261,7 @@ export class Partners extends React.Component {
 
       <div className={'absolute top-8 left-0 rounded-r z-10 bg-blue-12 ' +
         'text-blue-1 text-3xl px-20 py-6'}>
-        Partners
+        Previous Partners
       </div>
 
       <div className={'h-full flex justify-center items-center w-4/5 ml-auto ' +
