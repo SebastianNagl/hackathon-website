@@ -164,7 +164,7 @@ export class Testimonials extends React.Component<Props, {}> {
         </div>
         <div
           className={
-            'w-full h-5/6 py-4 pt-24 flex justify-center items-center md:px-4'
+            'w-full py-4 pt-24 flex justify-center items-center md:px-4 min-h-[480px]'
           }
         >
           <div className={'block w-full h-full py-4 relative'}>
