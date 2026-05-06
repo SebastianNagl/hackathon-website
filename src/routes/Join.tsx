@@ -56,16 +56,16 @@ export class Join extends React.Component {
                   >
                     SOT82137
                   </a>
-                  ,{' '}
+                  ) an.<br/><br/>
                   <a
                     href={'https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/registrationProcedures/76490?$ctx=&courseId=950889530'}
                     className={'underline font-semibold'}
                     target={'_blank'}
                     rel={'noreferrer'}
                   >
-                    zur Anmeldung
+                    Hier geht es zur Anmeldung
                   </a>
-                  ) oder <strong>TUM CIT</strong> (Modulcode folgt) an.
+                  .
                 </p>
               </div>
 

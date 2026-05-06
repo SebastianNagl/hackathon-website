@@ -9,8 +9,8 @@ interface Props {
 
 export class TestimonialSwiper extends React.Component<Props, {}> {
   render() {
-    return <div className="w-3/4 md:w-2/3 h-full mx-auto ">
-      <div className={'w-full mt-16 mb-0 relative h-full flex' +
+    return <div className="w-3/4 md:w-2/3 mx-auto">
+      <div className={'w-full mt-16 mb-0 relative flex' +
         ' flex-col justify-center align-middle items-center'}>
         <div className={classNames('absolute xl:top-20' +
           ' sm:top-1/4 -translate-y-1/2' +
@@ -38,10 +38,9 @@ export class TestimonialSwiper extends React.Component<Props, {}> {
             </span> :
             null }
         </div>
-        <div className={classNames('rounded bg-red-3 w-full sm:h-1/2' +
-          ' flex' +
-          ' justify-center align-center items-center',
-          this.props.testimonial.isTooBig ? 'h-3/4' : 'h-2/3')}>
+        <div className={classNames('rounded bg-red-3 w-full mt-20 md:mt-0' +
+          ' flex justify-center align-center items-center',
+          this.props.testimonial.isTooBig ? 'py-6 md:py-20' : 'py-6 md:py-16')}>
           <div className={'md:w-3/4 w-11/12 text-center py-8'}>
             <div className={classNames('text-left mx-auto w-10/12' +
               ' testimonial-text',
