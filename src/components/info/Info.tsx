@@ -10,7 +10,7 @@ type Props = {
 
 export class Info extends React.Component<Props, {}> {
   render() {
-    return <div className={'min-h-screen flex'}>
+    return <div className={'h-screen flex'}>
 
       <div className={'pt-8 px-6 bg-red-3 flex-grow mt-28 ' +
           'md:pt-16 lg:mt-24 xl:mt-28'}>
