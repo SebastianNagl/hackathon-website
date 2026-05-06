@@ -3,6 +3,7 @@ import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
+import graduationCapIcon from '../img/icons/graduation-cap.png';
 
 export class Join extends React.Component {
   render() {
@@ -69,6 +70,20 @@ export class Join extends React.Component {
                 </p>
               </div>
 
+            </div>
+
+            <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
+              'flex flex-row items-center gap-6 mb-8'}>
+              <img
+                src={graduationCapIcon}
+                alt={'Externe Studierende'}
+                className={'h-12 w-auto object-contain flex-shrink-0'}
+              />
+              <p className={'text-text-m lg:text-text-l text-blue-12'}>
+                <strong>Externe Studierende:</strong>{' '}
+                Verbleibende Plätze werden nach Ablauf der universitären
+                Anmeldephase vergeben – weitere Infos folgen.
+              </p>
             </div>
 
             <p className={'text-text-m lg:text-text-l text-blue-12'}>
