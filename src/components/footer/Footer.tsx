@@ -45,18 +45,19 @@ export class Footer extends React.Component<Props, {}> {
       <div className={'flex flex-col xl:flex-row xl:flex-wrap ' +
           'xl:justify-center xl:items-center xl:py-16'}>
 
-        <div className={'container mx-auto flex flex-col items-center ' +
-            'text-center py-8 gap-8 md:flex-row md:items-stretch ' +
-            'md:justify-between md:w-4/5'}>
+        <div className={'container mx-auto flex flex-row items-stretch ' +
+            'text-center justify-center py-8 gap-12 md:justify-between ' +
+            'md:w-4/5'}>
 
           {/* contact photo + details */}
-          <div className={'flex flex-row justify-center items-center gap-4'}>
-            <div className={'flex-shrink-0'}>
+          <div className={'flex flex-row justify-center items-start gap-4'}>
+            <div className={'flex justify-center items-center'}>
               <div
                 id={'contact-person'}
-                className={'w-20 h-20 md:w-32 md:h-32 rounded-full'} />
+                className={'w-32 h-32 rounded-full'} />
             </div>
-            <ContactDetails className={'text-left flex flex-col'}/>
+            <ContactDetails
+              className={'hidden w-4/5 text-left lg:flex lg:flex-col'}/>
           </div>
 
           {/* sitemap */}
@@ -73,8 +74,8 @@ export class Footer extends React.Component<Props, {}> {
           </div>
 
           {/* schirmherrschaft + coat of arms + llt logo */}
-          <div className={'flex flex-row items-center justify-center gap-4'}>
-            <div className={'flex flex-col items-start'}>
+          <div className={'flex flex-row items-end gap-4 self-stretch'}>
+            <div className={'flex flex-col items-start mb-4'}>
               <div className={'text-text-s opacity-60 mb-1'}>
                 unter der Schirmherrschaft
               </div>
@@ -91,19 +92,21 @@ export class Footer extends React.Component<Props, {}> {
               </div>
             </div>
             {this.props.backgroundColor === 'blue' &&
-              <img src={invertedBlackWhiteLogo} alt="" className="w-20 h-20 md:w-32 md:h-32"/>}
+              <img src={invertedBlackWhiteLogo} alt="" className="w-32 h-32 ml-1"/>}
             {this.props.backgroundColor === 'red' &&
-              <img src={blackWhiteLogo} alt="" className="w-20 h-20 md:w-32 md:h-32"/>}
+              <img src={blackWhiteLogo} alt="" className="w-32 h-32 ml-1"/>}
           </div>
 
         </div>
 
+        <ContactDetails
+          className={'w-4/5 text-left mx-auto flex-grow lg:hidden'}/>
+
       </div>
 
-      <div className={classNames(
-          'pt-4 pb-10 text-center text-text-s flex flex-col ' +
-          'gap-4 justify-center font-semi-bold lg:flex-row lg:gap-14',
-          this.tailwindTextColorClass)}>
+      <div className={'pb-10 text-center text-text-s flex flex-col ' +
+          'gap-4 justify-center font-semi-bold lg:basis-full lg:flex-row ' +
+          'lg:gap-14'}>
         <a href={'/datenschutz'}>Datenschutzerklärung</a>
         <a href={'/impressum'}>Impressum</a>
         <span>&copy; Copyright <a href={'https://legalplusplus.net'} target={'_blank'} rel={'noopener noreferrer'} className={'font-bold hover:underline'}>pschOrr95</a> 2026. Alle Rechte vorbehalten.</span>
