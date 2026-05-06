@@ -11,10 +11,14 @@ export class EventInformationList extends React.Component {
     ' keine Voraussetzung – das gesamte erforderliche Wissen wird direkt im' +
     ' Rahmen der Hackathon-Woche vermittelt.',
 
-    'Der Hackathon richtet sich an Studierende der TUM und der LMU.' +
-    ' LMU-Studierende melden sich über das LSF an, TUM-Studierende über' +
-    ' TUM SOT (Modul SOT82137) und TUM CIT (Modulcode folgt). TUM-Studierende können die Teilnahme mit' +
-    ' 3 ECTS-Credits als Bachelor-Modul anrechnen lassen. An der LMU wird' +
+    'TUM-Studierende der School of Social Sciences and Technology (SOT) melden sich über' +
+    ' TUM SOT (Modul SOT82137) an und können die Teilnahme mit' +
+    ' 3 ECTS-Credits als Bachelor-Modul anrechnen lassen.' +
+    ' Studierende anderer Schools können sich ebenfalls in das SOT-Modul einschreiben,' +
+    ' müssen es sich dann aber nachträglich von ihrer jeweiligen School anerkennen lassen.' +
+    ' Das ist für zahlreiche Studiengänge in der Regel unproblematisch möglich.',
+
+    'LMU-Studierende melden sich über das LSF an. An der LMU wird' +
     ' der Hackathon als Grundlagenseminar und Wahlpflichtmodul im' +
     ' Zertifikatsstudiengang Rechtsinformatik angeboten.',
 
