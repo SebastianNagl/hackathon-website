@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
 import graduationCapIcon from '../img/icons/graduation-cap.png';
+
+
+function TypeformLive({id}: {id: string}) {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [id]);
+  return <div data-tf-live={id} />;
+}
 
 export class Join extends React.Component {
   render() {
@@ -34,7 +48,7 @@ export class Join extends React.Component {
                   className={'h-12 object-contain'}
                 />
                 <p className={'text-text-m lg:text-text-l text-blue-12 text-center'}>
-                  LMU-Studierende melden sich über das{' '}
+                  LMU-Studierende der Juristischen Fakultät melden sich über das{' '}
                   <strong>LSF</strong> an.
                 </p>
               </div>
@@ -72,18 +86,24 @@ export class Join extends React.Component {
 
             </div>
 
-            <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
-              'flex flex-row items-center gap-6 mb-8'}>
-              <img
-                src={graduationCapIcon}
-                alt={'Externe Studierende'}
-                className={'h-12 w-auto object-contain flex-shrink-0'}
-              />
-              <p className={'text-text-m lg:text-text-l text-blue-12'}>
-                <strong>Externe Studierende:</strong>{' '}
-                Verbleibende Plätze werden nach Ablauf der universitären
-                Anmeldephase vergeben – weitere Infos folgen.
+            <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 mb-8'}>
+              <div className={'flex flex-row items-center gap-6 mb-6'}>
+                <img
+                  src={graduationCapIcon}
+                  alt={'Andere Studierende'}
+                  className={'h-12 w-auto object-contain flex-shrink-0'}
+                />
+                <p className={'text-text-m lg:text-text-l text-blue-12'}>
+                  <strong>Andere Studierende:</strong>{' '}
+                  Du hast Interesse am Hackathon, kannst dich aber nicht über die LMU oder TUM anmelden?
+                  Melde dich jetzt zur Warteliste an! Du wirst benachrichtigt, sobald die universitäre
+                  Anmeldephase abgelaufen ist und Restplätze vergeben werden.
+                </p>
+              </div>
+              <p className={'text-text-m lg:text-text-l text-blue-12 mb-4'}>
+                Über folgendes Formular kannst Du dich für die Warteliste anmelden:
               </p>
+              <TypeformLive id={'01KRP05QZT90FJPDK0GBV25447'} />
             </div>
 
             <p className={'text-text-m lg:text-text-l text-blue-12'}>
