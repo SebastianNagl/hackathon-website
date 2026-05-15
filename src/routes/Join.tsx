@@ -3,7 +3,6 @@ import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
-import graduationCapIcon from '../img/icons/graduation-cap.png';
 
 
 function TypeformLive({id}: {id: string}) {
@@ -71,16 +70,16 @@ export class Join extends React.Component {
                   >
                     SOT82137
                   </a>
-                  ) an.<br/><br/>
+                  ,{' '}
                   <a
                     href={'https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/registrationProcedures/76490?$ctx=&courseId=950889530'}
                     className={'underline font-semibold'}
                     target={'_blank'}
                     rel={'noreferrer'}
                   >
-                    Hier geht es zur Anmeldung
+                    zur Anmeldung
                   </a>
-                  .
+                  ) oder <strong>TUM CIT</strong> (Modulcode folgt) an.
                 </p>
               </div>
 
