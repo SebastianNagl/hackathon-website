@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {Footer} from '../components/footer/Footer';
 import {TeamCard} from '../components/team/TeamCard';
 
@@ -50,27 +51,39 @@ export class Team2023 extends React.Component {
   ];
 
   render() {
-    return (<div className="overflow-x-hidden">
-      <div className={'min-h-screen flex bg-red-3 w-full justify-center ' +
-          'items-center mb-10'}>
-        <div className={'container p-10 grid grid-cols-1 sm:grid-cols-2 ' +
-            'lg:grid-cols-3 gap-8 min-h-full flex ' +
-            'justify-center items-center mt-24 tabletL:mt-28 lg:mt-32 xl:mt-36'}
-        >
-          {this.teamMembers.map((member, index) =>
-            <TeamCard
-              key={index}
-              backgroundClass={member.backgroundClass}
-              email={member.email}
-              name={member.name}
-              shortDesc={member.shortDesc}
-              linkedIn={member.linkedIn} />,
-          )}
+    return <div className={'overflow-x-hidden min-h-screen flex flex-col'}>
+
+      <div className={'flex flex-col grow pt-8 grow mb-6 lg:mb-0 mt-20 ' +
+          'tabletL:mt-24 xl:mt-28 relative'}>
+
+        <Link to={'/result'}
+          className={'absolute top-24 left-6 tabletL:left-10 text-blue-12' +
+            ' opacity-70 hover:opacity-100 transition-opacity text-sm font-medium'}>
+          ← Zurück zum Recap
+        </Link>
+
+        <div className={'py-6 pl-8 pr-10 md:mt-10 tabletL:px-12 ' +
+            'lg:w-4/5 lg:mx-auto'}>
+
+          <div className={'container grid grid-cols-1 sm:grid-cols-2 ' +
+              'lg:grid-cols-3 gap-8 mt-16'}>
+            {this.teamMembers.map((member, index) =>
+              <TeamCard
+                key={index}
+                backgroundClass={member.backgroundClass}
+                email={member.email}
+                name={member.name}
+                shortDesc={member.shortDesc}
+                linkedIn={member.linkedIn} />,
+            )}
+          </div>
+
         </div>
+
       </div>
 
       <Footer backgroundColor={'blue'}/>
 
-    </div>);
+    </div>;
   }
 }
