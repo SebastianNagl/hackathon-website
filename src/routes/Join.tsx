@@ -4,6 +4,7 @@ import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
 import graduationCapIcon from '../img/icons/graduation-cap.svg';
+import paragraphIcon from '../img/icons/paragraph.svg';
 
 
 function TypeformLive({id}: {id: string}) {
@@ -42,11 +43,18 @@ export class Join extends React.Component {
 
               <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
                 'flex-1 flex flex-col items-center gap-4'}>
-                <img
-                  src={lmuLogo}
-                  alt={'LMU München'}
-                  className={'h-12 object-contain'}
-                />
+                <div className={'flex flex-row items-center gap-3'}>
+                  <img
+                    src={lmuLogo}
+                    alt={'LMU München'}
+                    className={'h-12 object-contain'}
+                  />
+                  <img
+                    src={paragraphIcon}
+                    alt={'Juristische Fakultät'}
+                    className={'h-8 w-auto object-contain opacity-60'}
+                  />
+                </div>
                 <p className={'text-text-m lg:text-text-l text-blue-12 text-center'}>
                   LMU-Studierende der Juristischen Fakultät melden sich über das{' '}
                   <strong>LSF</strong> an.
@@ -90,19 +98,23 @@ export class Join extends React.Component {
               <div className={'flex flex-row items-center gap-6 mb-6'}>
                 <img
                   src={graduationCapIcon}
-                  alt={'Andere Studierende'}
+                  alt={'Teilnahme ohne Lehrveranstaltungsanrechnung'}
                   className={'h-12 w-auto object-contain flex-shrink-0'}
                 />
                 <p className={'text-text-m lg:text-text-l text-blue-12'}>
-                  <strong>Andere Studierende:</strong>{' '}
-                  Du hast Interesse am Hackathon, kannst dich aber nicht über die LMU oder TUM anmelden?
-                  Melde dich jetzt zur Warteliste an! Du wirst benachrichtigt, sobald die universitäre
-                  Anmeldephase abgelaufen ist und Restplätze vergeben werden.
+                  <strong>Teilnahme ohne Lehrveranstaltungsanrechnung:</strong>{' '}
+                  Du kannst auch ohne Anrechnung als Lehrveranstaltung am Hackathon teilnehmen –
+                  melde dich über das Formular an, wenn du zu einer der folgenden Gruppen gehörst:
                 </p>
               </div>
-              <p className={'text-text-m lg:text-text-l text-blue-12 mb-4'}>
-                Über folgendes Formular kannst Du dich für die Warteliste anmelden:
-              </p>
+              <ul className={'list-disc text-text-m lg:text-text-l text-blue-12 mb-6 ml-6'}>
+                <li className={'mb-2'}>
+                  <strong>LMU-Studierende der Juristischen Fakultät</strong>, die nicht an einem Grundlagenseminar teilnehmen
+                </li>
+                <li>
+                  <strong>Andere Studierende</strong>, die sich nicht über LSF oder TUM SOT anmelden können
+                </li>
+              </ul>
               <TypeformLive id={'01KRP05QZT90FJPDK0GBV25447'} />
             </div>
 

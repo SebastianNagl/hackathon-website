@@ -50,10 +50,12 @@ const groups: Group[] = [
       </>,
 
       <>
-        Andere Studierende können sich über die{' '}
-        <a href={'/join'} className={'underline font-semibold'}>Warteliste</a>{' '}
-        für verbleibende Plätze bewerben, die nach Ablauf der universitären
-        Anmeldephase vergeben werden.
+        <strong>LMU-Studierende der Juristischen Fakultät</strong>, die nicht an einem{' '}
+        <strong>Grundlagenseminar</strong> teilnehmen, sowie <strong>andere Studierende</strong>,
+        die sich nicht über die Lehrmodule anmelden können, sind ebenfalls herzlich willkommen.
+        Die Teilnahme erfolgt in diesem Fall <strong>ohne Anrechnung als Lehrveranstaltung</strong>.
+        Zur Anmeldung geht es{' '}
+        <a href={'/join'} className={'underline font-semibold'}>hier</a>.
       </>,
 
       <>
