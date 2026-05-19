@@ -3,6 +3,7 @@ import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
+import graduationCapIcon from '../img/icons/graduation-cap.svg';
 
 
 function TypeformLive({id}: {id: string}) {
