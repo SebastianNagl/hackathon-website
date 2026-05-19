@@ -39,7 +39,9 @@ const groups: Group[] = [
         Bachelor-Modul anrechnen lassen. Studierende anderer Schools können sich
         ebenfalls in das SOT-Modul einschreiben, müssen es sich dann aber
         nachträglich von ihrer jeweiligen School anerkennen lassen. Das ist für
-        zahlreiche Studiengänge in der Regel unproblematisch möglich.
+        zahlreiche Studiengänge in der Regel unproblematisch möglich, da der Hackathon als <strong>Plug-in-Modul</strong> angeboten wird.{' '}
+        <strong>Master-Studierende</strong> haben keine Anrechnungsmöglichkeit,
+        können sich aber ebenfalls über das SOT-Modul für eine Teilnahme anmelden.
       </>,
 
       <>
@@ -51,8 +53,10 @@ const groups: Group[] = [
 
       <>
         <strong>LMU-Studierende der Juristischen Fakultät</strong>, die nicht an einem{' '}
-        <strong>Grundlagenseminar</strong> teilnehmen, sowie <strong>andere Studierende</strong>,
-        die sich nicht über die Lehrmodule anmelden können, sind ebenfalls herzlich willkommen.
+        <strong>Grundlagenseminar</strong> teilnehmen, sowie{' '}
+        <strong>Studierende anderer Fakultäten</strong>, die sich nicht für die Module im LSF
+        oder TUM-online anmelden können und keine Anrechnung für ihr Studium benötigen,
+        sind ebenfalls herzlich willkommen.
         Die Teilnahme erfolgt in diesem Fall <strong>ohne Anrechnung als Lehrveranstaltung</strong>.
         Zur Anmeldung geht es{' '}
         <a href={'/join'} className={'underline font-semibold'}>hier</a>.

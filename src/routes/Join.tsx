@@ -59,6 +59,9 @@ export class Join extends React.Component {
                   LMU-Studierende der Juristischen Fakultät melden sich über das{' '}
                   <strong>LSF</strong> an.
                 </p>
+                <p className={'text-text-s text-blue-12 text-center italic'}>
+                  Die Anmeldungen für das Grundlagenseminar sind bereits geschlossen.
+                </p>
               </div>
 
               <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
@@ -69,8 +72,8 @@ export class Join extends React.Component {
                   className={'h-12 object-contain'}
                 />
                 <p className={'text-text-m lg:text-text-l text-blue-12 text-center'}>
-                  TUM-Studierende melden sich über{' '}
-                  <strong>TUM SOT</strong> (Modul{' '}
+                  Alle TUM-Studierende (Bachelor und Master) melden sich über das{' '}
+                  <strong>TUM SOT</strong>-Modul{' '}
                   <a
                     href={'https://campus.tum.de/tumonline/WBMODHB.wbShowMHBReadOnly?pKnotenNr=4715303&pOrgNr=52498'}
                     className={'underline font-semibold'}
@@ -79,17 +82,17 @@ export class Join extends React.Component {
                   >
                     SOT82137
                   </a>
-                  ,{' '}
-                  <a
-                    href={'https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/registrationProcedures/76490?$ctx=&courseId=950889530'}
-                    className={'underline font-semibold'}
-                    target={'_blank'}
-                    rel={'noreferrer'}
-                  >
-                    zur Anmeldung
-                  </a>
-                  ) oder <strong>TUM CIT</strong> (Modulcode folgt) an.
+                  {' '}an.
                 </p>
+                <a
+                  href={'https://campus.tum.de/tumonline/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/registrationProcedures/76490?$ctx=&courseId=950889530'}
+                  className={'text-white px-6 py-2 rounded font-bold text-text-m hover:opacity-80 transition-opacity'}
+                  style={{backgroundColor: '#0545AF'}}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  Anmeldung
+                </a>
               </div>
 
             </div>
@@ -112,10 +115,12 @@ export class Join extends React.Component {
                   <strong>LMU-Studierende der Juristischen Fakultät</strong>, die nicht an einem Grundlagenseminar teilnehmen
                 </li>
                 <li>
-                  <strong>Andere Studierende</strong>, die sich nicht über LSF oder TUM SOT anmelden können
+                  <strong>Studierende anderer Fakultäten</strong>, die sich nicht für die Module im LSF oder TUM-online anmelden können und keine Anrechnung für ihr Studium benötigen
                 </li>
               </ul>
-              <TypeformLive id={'01KRP05QZT90FJPDK0GBV25447'} />
+              <div className={'flex justify-center'}>
+                <TypeformLive id={'01KRP05QZT90FJPDK0GBV25447'} />
+              </div>
             </div>
 
             <p className={'text-text-m lg:text-text-l text-blue-12'}>
