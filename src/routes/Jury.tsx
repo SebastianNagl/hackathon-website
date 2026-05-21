@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -131,98 +132,100 @@ export class Jury extends React.Component {
   }
 
   render() {
-    return (<div className="overflow-x-hidden">
-      <div className={'min-h-screen flex bg-red-3 w-full justify-center ' +
-        'items-center mb-10'}>
-        <div className={classNames('hidden md:block w-full px-12 lg:w-4/5' +
-          ' xl:w-3/5 mx-auto normal-view mt-[12%] md:mt-[12%] lg:mt-[10%]' +
-          ' xl:mt-[10%] 2xl:mt-[8%]')}>
+    return <div className={'overflow-x-hidden min-h-screen flex flex-col'}>
 
-          <div className={'w-full grid grid-cols-5 '}>
-            {this.juryMembers.map((member, i) => {
-              return <div key={i}
-                onClick={() => this.selectJuryMember(i)}
-                className={classNames('w-full test transition-all' +
-                  ' cursor-pointer', member.bgClass,
+      <div className={'flex flex-col grow pt-8 grow mb-6 lg:mb-0 mt-20 ' +
+          'tabletL:mt-24 xl:mt-28 relative'}>
+
+        <Link to={'/result'}
+          className={'absolute top-24 left-6 tabletL:left-10 text-blue-12' +
+            ' opacity-70 hover:opacity-100 transition-opacity text-sm font-medium'}>
+          ← Zurück zum Recap
+        </Link>
+
+        <div className={'py-6 pl-8 pr-10 md:mt-10 tabletL:px-12 ' +
+            'lg:w-4/5 lg:mx-auto'}>
+
+          <div className={classNames('hidden md:block mt-16')}>
+            <div className={'w-full grid grid-cols-5'}>
+              {this.juryMembers.map((member, i) => {
+                return <div key={i}
+                  onClick={() => this.selectJuryMember(i)}
+                  className={classNames('w-full test transition-all' +
+                    ' cursor-pointer', member.bgClass,
                   this.state.currentlySelectedJuryMemberIndex === i ?
-                  'scale-105 z-10 rounded-sm' :
-                  'grayscale hover:rounded-sm')}/>;
-            })}
+                    'scale-105 z-10 rounded-sm' :
+                    'grayscale hover:rounded-sm')}/>;
+              })}
+            </div>
+            <div className={'w-full bg-blue-3 md:h-[450px] xl:h-[520px]' +
+              ' 2xl:h-[450px] flex justify-center align-middle items-center'}>
+              {this.state.currentlySelectedJuryMember &&
+                <div className={'w-4/5 h-4/5 pt-4 text-blue-900'}>
+                  <div className={'text-head-m font-bold mb-4'}>
+                    {this.state.currentlySelectedJuryMember.name}
+                  </div>
+                  <div className={'opacity-90 text-semibold mb-4'}>
+                    {this.state.currentlySelectedJuryMember.shortText}
+                  </div>
+                  <div className={'opacity-90 text-text-subtitle'}>
+                    {this.state.currentlySelectedJuryMember.text}
+                  </div>
+                </div>}
+              {!this.state.currentlySelectedJuryMember &&
+                <div className={'text-head-sm text-center lg:text-head-m' +
+                  ' font-bold mb-4 text-blue-900 px-4'}>
+                  Erfahre mehr über unsere Jurymitglieder, indem du auf
+                  ihre Profilbilder klickst.
+                </div>}
+            </div>
           </div>
-          <div className={'w-full bg-blue-3 md:h-[450px] xl:h-[520px]' +
-            ' 2xl:h-[450px] flex' +
-            ' justify-center' +
-            ' align-middle items-center'}>
-            {this.state.currentlySelectedJuryMember &&
-              <div className={'w-4/5 h-4/5 pt-4 text-blue-900'}>
-                <div className={'text-head-m font-bold mb-4'}>
-                  {this.state.currentlySelectedJuryMember.name}
-                </div>
-                <div className={'opacity-90 text-semibold mb-4'}>
-                  {this.state.currentlySelectedJuryMember.shortText}
-                </div>
-                <div className={'opacity-90 text-text-subtitle'}>
-                  {this.state.currentlySelectedJuryMember.text}
-                </div>
-              </div>}
-            {!this.state.currentlySelectedJuryMember &&
-              <div className={'text-head-sm text-center lg:text-head-m' +
-                ' font-bold mb-4' +
-                ' text-blue-900 px-4'}>
-                Erfahre mehr über unsere Jurymitglieder, indem du auf
-                ihre Profilbilder klickst.
-              </div>}
+
+          <div className={'block w-full py-4 md:hidden mt-16'}>
+            <Swiper
+              className="mySwiper"
+              spaceBetween={10}
+              slidesPerView={1.1}
+              centeredSlides={true}>
+
+              {this.juryMembers.map((card, i) => {
+                return <SwiperSlide key={i} className="block rounded">
+                  <div className={classNames('flex flex-col p-10')}>
+                    <div className={classNames('flex flex-col justify-center' +
+                      ' items-center align-middle gap-4 w-full pb-6')}>
+                      <div className={classNames(
+                          'h-full h-56 w-56 flex' +
+                          ' justify-center align-center items-center -left-20')}>
+                        <img
+                          src={card.img}
+                          className={'h-auto max-h-[80%] rounded'}
+                          alt={card.name} />
+                      </div>
+                      <div className={classNames('flex flex-col gap-6 text-left')}>
+                        <div className={classNames('text-head-m font-semi-bold')}>
+                          { card.name }
+                        </div>
+                        <div className={classNames('text-text-l ')}>
+                          { card.shortText }
+                        </div>
+                      </div>
+                    </div>
+                    <div className={classNames('text-text-m text-left')}>
+                      {card.text}
+                    </div>
+                  </div>
+                </SwiperSlide>;
+              })}
+
+            </Swiper>
           </div>
 
         </div>
-        <div className={'block w-full h-4/5 py-4 md:hidden mt-28'}>
-          <Swiper
-            className="mySwiper"
-            spaceBetween={10}
-            slidesPerView={1.1}
-            centeredSlides={true}>
 
-            {this.juryMembers.map((card, i) => {
-              return <SwiperSlide key={i} className="block rounded">
-                <div className={classNames('flex flex-col p-10')}>
-                  <div className={classNames('flex flex-col justify-center' +
-                    ' items-center align-middle gap-4' +
-                    ' w-full pb-6')}>
-                    <div className={classNames(
-                        'h-full' +
-                      ' h-56' +
-                      ' w-56 flex' +
-                      ' justify-center align-center items-center' +
-                      ' -left-20')}>
-                      <img
-                        src={card.img}
-                        className={'h-auto max-h-[80%] rounded'}
-                        alt={card.name} />
-                    </div>
-                    <div className={classNames('flex flex-col gap-6' +
-                      ' text-left')}>
-                      <div className={classNames('text-head-m font-semi-bold')}>
-                        { card.name }
-                      </div>
-                      <div className={classNames('text-text-l ')}>
-                        { card.shortText }
-                      </div>
-                    </div>
-                  </div>
-                  <div className={classNames('text-text-m text-left')}>
-                    {card.text}
-                  </div>
-                </div>
-              </SwiperSlide>;
-            })}
-
-          </Swiper>
-
-        </div>
       </div>
 
       <Footer backgroundColor={'blue'}/>
 
-    </div>);
+    </div>;
   }
 }
