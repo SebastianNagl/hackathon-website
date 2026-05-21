@@ -1,24 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
 import lmuLogo from '../img/partners/lmu.png';
 import tumLogo from '../img/partners/TUM_good.svg';
 import graduationCapIcon from '../img/icons/graduation-cap.svg';
 import paragraphIcon from '../img/icons/paragraph.svg';
-
-
-function TypeformLive({id}: {id: string}) {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, [id]);
-  return <div data-tf-live={id} />;
-}
 
 export class Join extends React.Component {
   render() {
@@ -119,7 +105,15 @@ export class Join extends React.Component {
                 </li>
               </ul>
               <div className={'flex justify-center'}>
-                <TypeformLive id={'01KRP05QZT90FJPDK0GBV25447'} />
+                <a
+                  href={'https://docs.google.com/forms/d/e/1FAIpQLSdwxtQDjrti6N6H-n3NAwy2yNdibFpil3RYLG6s_XtFJ5VKoA/viewform?usp=publish-editor'}
+                  className={'text-white px-6 py-2 rounded font-bold text-text-m hover:opacity-80 transition-opacity'}
+                  style={{backgroundColor: '#0545AF'}}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  Anmeldung
+                </a>
               </div>
             </div>
 
