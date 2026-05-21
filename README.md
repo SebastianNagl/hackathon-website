@@ -2,6 +2,10 @@
 
 This is the frontend for [legallovestech.de](https://legallovestech.de). 
 
+## Deployment
+
+Any push to `master` is automatically built and deployed to [legallovestech.de](https://legallovestech.de) via the `Build and deploy` GitHub Actions workflow (see `.github/workflows/deploy.yml`).
+
 ## Build & Install
 
 Install all dependencies with `npm i` or `npm ci` or any other package manager like `yarn`.  
