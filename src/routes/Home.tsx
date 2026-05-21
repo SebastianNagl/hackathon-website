@@ -3,7 +3,6 @@ import {About} from '../components/about/About';
 import {Footer} from '../components/footer/Footer';
 import {AccessToJustice} from '../components/info/AccessToJustice';
 import {Info} from '../components/info/Info';
-import {MediaPartners} from '../components/mediapartners/Partners';
 import {Partners} from '../components/partners/Partners';
 import {Testimonials} from '../components/testimonials/Testimonials';
 
@@ -30,7 +29,6 @@ export class Home extends React.Component {
       <About scrollTo={this.scrollTo} />
       <Testimonials scrollTo={this.scrollTo} />
       <Partners />
-      <MediaPartners />
       <Footer backgroundColor={'blue'} />
     </div>;
   }

@@ -1,6 +1,7 @@
 import React from 'react';
+import './Partners.css';
 import cdpsLogo from '../../img/partners/cdps.png';
-import disruptLogo from '../../img/partners/disrupt.png';
+import disruptLogo from '../../img/partners/disrupt_law_logo.jpg';
 import eLegalLogo from '../../img/partners/elegal.png';
 import legalTechDeLogo from '../../img/partners/legal_tech_init_de.svg';
 import liquidLegalLogo from '../../img/partners/liquid_legal.png';
@@ -26,264 +27,78 @@ import built from '../../img/partners/built.png';
 import stmj from '../../img/partners/stmj.png';
 import uniLeipzig from '../../img/partners/uniLeipzig.png';
 import ds4g from '../../img/partners/ds4g-logo.svg';
-import {PartnerItem} from './PartnerItem';
-
+import ltv from '../../img/mediapartners/legal_tech_verzeichnis.png';
+import beck from '../../img/mediapartners/beck.png';
 
 interface Partner {
-  // the image source string to the logo of the partner
   img: string;
-  // the name of the organization which is shown to the user
   name: string;
-  // indicator weather the provided logo is small or big, there is no
-  // exact measurement but in general any wide logo is "big" while more
-  // quadratic lltLogos are "small"
-  size: 'small' | 'big' | 'very-big' | 'cube';
-  // depending on the logo the background color can be chosen, light lltLogos
-  // are probably best on a dark blue background while very dark lltLogos are
-  // the best on a very light blue or light blue
-  backgroundColor: 'dark-blue' | 'light-blue' | 'very-light-blue';
-  // link to the website of the partner organization
   link: string;
-  // indicates that the partner is priority and should always be somewhere
-  // around the top
-  priorityPick?: boolean;
+  dark?: boolean;
 }
 
+const partners: Partner[] = [
+  {img: stmj, name: 'Bayerisches Staatsministerium der Justiz', link: 'https://www.justiz.bayern.de/ministerium/'},
+  {img: ltc, name: 'Legal Tech Colab', link: 'https://www.legal-tech-colab.de/'},
+  {img: openLegalTechLogo, name: 'Open Legal Tech e. V.', link: 'https://open-legal-tech.org/'},
+  {img: unternehmerTUM, name: 'UnternehmerTUM GmbH', link: 'https://www.unternehmertum.de/'},
+  {img: recodeLogo, name: 'recode.law e.V.', link: 'https://recode.law/'},
+  {img: liquidLegalLogo, name: 'Liquid Legal Institute e.V.', link: 'https://www.liquid-legal-institute.com/'},
+  {img: lmuLogo, name: 'Ludwig-Maximilians-Universität München', link: 'https://www.lmu.de/de/index.html'},
+  {img: orgTrierLogo, name: 'Legal Tech Trier e.V.', link: 'https://www.legaltechtrier.de/', dark: true},
+  {img: orgCologneLogo, name: 'Legal Tech Lab Cologne e.V.', link: 'https://legaltechcologne.de/'},
+  {img: mlTechLogo, name: 'Munich Legal Tech Student Association e.V.', link: 'https://www.ml-tech.org/'},
+  {img: eLegalLogo, name: 'eLEGAL e.V.', link: 'https://www.elegal.technology/'},
+  {img: tumLogo, name: 'Technische Universität München', link: 'https://www.tum.de/'},
+  {img: orgFreiburg, name: 'fruit - Freiburg Recht und IT', link: 'https://freiburg-recht-und-it.de/', dark: true},
+  {img: riLMU, name: 'LMU RIZ', link: 'https://www.jura.uni-muenchen.de/fakultaet/riz_neu/index.html'},
+  {img: disruptLogo, name: 'disrUPt law Heidelberg e.V.', link: 'https://disrupt-law.org/'},
+  {img: bucerius, name: 'Bucerius Law School', link: 'https://www.law-school.de/'},
+  {img: orgAachen, name: 'Legal Tech Aachen', link: 'https://www.linkedin.com/company/legal-tech-aachen/'},
+  {img: orgGiessenLogo, name: 'JUST Legal Tech e.V.', link: 'https://www.just-legaltech.de/'},
+  {img: legalTechDeLogo, name: 'Legal Tech Verband Deutschland e.V.', link: 'https://www.legaltechverband.de/'},
+  {img: orgFrankfurtLogo, name: 'Legal Tech Lab Frankfurt am Main e.V.', link: 'https://legaltechlab.de/'},
+  {img: orgMarburgLogo, name: 'Legal Tech Lab Marburg', link: 'https://www.legal-tech-marburg.de/'},
+  {img: cdpsLogo, name: 'TUM Center for Digital Public Services', link: 'https://www.tum-cdps.de/'},
+  {img: orgMannheim, name: 'ltc Mannheim e.V.', link: 'https://www.ltc-mannheim.de/', dark: true},
+  {img: womenInAI, name: 'Women in AI and Robotics Germany e.V.', link: 'https://www.womeninairobotics.de/'},
+  {img: ds4g, name: 'DigitalService GmbH des Bundes', link: 'https://digitalservice.bund.de/'},
+  {img: uniLeipzig, name: 'Universität Leipzig', link: 'https://www.uni-leipzig.de/'},
+  {img: built, name: 'Bayreuther Initiative für Legal Tech', link: 'https://www.built-bt.de/'},
+  {img: ltv, name: 'Legal Tech Verzeichnis', link: 'https://legal-tech-verzeichnis.de/'},
+  {img: beck, name: 'VERLAG C.H.BECK oHG', link: 'https://www.beck.de/'},
+];
+
 export class Partners extends React.Component {
-  // list of all partners
-  partnerList: Partner[] = [
-    {
-      img: stmj,
-      name: 'Bayerisches Staatsministerium der Justiz',
-      size: 'very-big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.justiz.bayern.de/ministerium/',
-    }, {
-      img: ltc,
-      name: 'Legal Tech Colab',
-      size: 'big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.legal-tech-colab.de/',
-    }, {
-      img: openLegalTechLogo,
-      name: 'Open Legal Tech e. V.',
-      size: 'cube',
-      backgroundColor: 'very-light-blue',
-      link: 'https://open-legal-tech.org/',
-    }, {
-      img: unternehmerTUM,
-      name: 'UnternehmerTUM GmbH',
-      size: 'very-big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.unternehmertum.de/',
-    },
-
-    {
-      img: recodeLogo,
-      name: 'recode.law e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://recode.law/',
-    },
-
-    {
-      img: liquidLegalLogo,
-      name: 'Liquid Legal Institute e.V.',
-      size: 'cube',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.liquid-legal-institute.com/',
-    }, {
-      img: lmuLogo,
-      name: 'Ludwig-Maximilians-Universität München',
-      size: 'very-big',
-      backgroundColor: 'light-blue',
-      link: 'https://www.lmu.de/de/index.html',
-    },
-
-    {
-      img: orgTrierLogo,
-      name: 'Legal Tech Trier e.V.',
-      size: 'small',
-      backgroundColor: 'dark-blue',
-      link: 'https://www.legaltechtrier.de/',
-    },
-
-    {
-      img: orgCologneLogo,
-      name: 'Legal Tech Lab Cologne e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://legaltechcologne.de/',
-    }, {
-      img: mlTechLogo,
-      name: 'Munich Legal Tech Student Association e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://www.ml-tech.org/',
-    },
-
-    {
-      img: eLegalLogo,
-      name: 'eLEGAL e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://www.elegal.technology/',
-    }, {
-      img: tumLogo,
-      name: 'Technische Universität München',
-      size: 'very-big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.tum.de/',
-    }, {
-      img: orgFreiburg,
-      name: 'fruit - Freiburg Recht und IT',
-      size: 'big',
-      backgroundColor: 'dark-blue',
-      link: 'https://freiburg-recht-und-it.de/',
-    }, {
-      img: riLMU,
-      name: 'LMU RIZ',
-      size: 'cube',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.jura.uni-muenchen.de/fakultaet/riz_neu/index.html',
-    }, {
-      img: disruptLogo,
-      name: 'disrUPt law Heidelberg e.V.',
-      size: 'small',
-      backgroundColor: 'dark-blue',
-      link: 'https://disrupt-law.org/',
-    },
-
-    {
-      img: bucerius,
-      name: 'Bucerius Law School',
-      size: 'very-big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.law-school.de/',
-    }, {
-      img: orgAachen,
-      name: 'Legal Tech Aachen',
-      size: 'small',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.linkedin.com/company/legal-tech-aachen/',
-    },
-
-    {
-      img: orgGiessenLogo,
-      name: 'JUST Legal Tech e.V.',
-      size: 'small',
-      backgroundColor: 'light-blue',
-      link: 'https://www.just-legaltech.de/',
-    }, {
-      img: legalTechDeLogo,
-      name: 'Legal Tech Verband Deutschland e.V.',
-      size: 'very-big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.legaltechverband.de/',
-    },
-
-    {
-      img: orgFrankfurtLogo,
-      name: 'Legal Tech Lab Frankfurt am Main e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://legaltechlab.de/',
-    },
-
-    {
-      img: orgMarburgLogo,
-      name: 'Legal Tech Lab Marburg',
-      size: 'big',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.legal-tech-marburg.de/',
-    },
-
-    {
-      img: cdpsLogo,
-      name: 'TUM Center for Digital Public Services',
-      size: 'cube',
-      backgroundColor: 'light-blue',
-      link: 'https://www.tum-cdps.de/',
-    }, {
-      img: orgMannheim,
-      name: 'ltc Mannheim e.V.',
-      size: 'big',
-      backgroundColor: 'dark-blue',
-      link: 'https://www.ltc-mannheim.de/',
-    }, {
-      img: womenInAI,
-      name: 'Women in Artificial Intelligence and Robotics Germany e.V.',
-      size: 'big',
-      backgroundColor: 'light-blue',
-      link: 'https://www.womeninairobotics.de/',
-    }, {
-      img: ds4g,
-      size: 'cube',
-      backgroundColor: 'very-light-blue',
-      link: 'https://digitalservice.bund.de/',
-      name: 'DigitalService GmbH des Bundes',
-    }, {
-      img: uniLeipzig,
-      size: 'small',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.uni-leipzig.de/',
-      name: 'Universität Leipzig',
-    }, {
-      img: built,
-      size: 'small',
-      backgroundColor: 'very-light-blue',
-      link: 'https://www.built-bt.de/',
-      name: 'Bayreuther Initiative für Legal Tech',
-    },
-  ];
-
-  randomizedPartnerList(): Partner[] {
-    return this.partnerList;
-    // return [
-    //   // priority partners should always come first and as such are
-    //   // always in the beginning of the list
-    //   ...this.partnerList.filter((p) => p.priorityPick),
-    //   // there are better ways to make sure that the array is properly
-    //   // sorted than using Math.random() with .sort(), however for
-    //   // this application this is random and efficient enough
-    //   ...this.partnerList.filter((p) => !p.priorityPick)
-    //       .sort(() => 0.5 - Math.random()),
-    // ];
-  }
-
   render() {
-    return <div id="partners-page" className={'relative flex z-10 mb-24'}>
-      {/* container for the left aligned, colored sidebar */}
-      <div className={'items-center flex h-full absolute -left-2 mt-auto'}>
-        {/* left aligned, colored sidebar */}
-        <div className={'h-4/5 bg-red-3 w-12 rounded'}></div>
-      </div>
+    const items = [...partners, ...partners];
 
+    return <div id="partners-page" className={'relative mb-24 bg-blue-7 py-8'}>
       <div className={'absolute top-8 left-0 rounded-r z-10 bg-blue-12 ' +
         'text-blue-1 text-3xl px-20 py-6'}>
         Previous Partners
       </div>
 
-      <div className={'h-full flex justify-center items-center w-4/5 ml-auto ' +
-        'mr-2 pt-52 z-10 flex-grow'}>
-
-        <div className={'grid grid-flow-row-dense xl:grid-flow-auto h-full' +
-          ' gap-3 w-4/5' +
-          ' ml-auto ' +
-          'mr-4 justify-center items-center grid-cols-3 md:grid-cols-4 ' +
-          'lg:grid-cols-6 lg:w-11/12 xl:grid-cols-7 '}>
-
-          {this.randomizedPartnerList().map((partner, index) => <PartnerItem
-            key={index}
-            img={partner.img}
-            name={partner.name}
-            size={partner.size}
-            backgroundColor={partner.backgroundColor}
-            link={partner.link}
-          />)}
-
+      <div className={'pt-28 pb-4 overflow-hidden'}>
+        <div className={'partners-track'}>
+          {items.map((partner, index) => (
+            <a
+              key={index}
+              href={partner.link}
+              target="_blank"
+              rel="noreferrer"
+              title={partner.name}
+              className={'flex-shrink-0 mx-4 w-40 h-20 flex items-center ' +
+                'justify-center p-2 hover:scale-105 transition-transform'}>
+              <img
+                src={partner.img}
+                alt={partner.name}
+                className={'max-h-full max-w-full object-contain ' +
+                  (partner.dark ? 'brightness-0 invert' : '')}
+              />
+            </a>
+          ))}
         </div>
-
       </div>
     </div>;
   }
