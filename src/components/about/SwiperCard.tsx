@@ -23,7 +23,7 @@ export class SwiperCard extends React.Component<Props, {}> {
       <div className={'text-text-s 750-h:text-text-subtitle' +
         ' 850-h:text-text-l text-left px-6 pt-2 850-h:text-justify'}
       dangerouslySetInnerHTML={{__html:
-               `${this.props.info}<br />${this.props.details}`}}
+               this.props.info ? `${this.props.info}<br />${this.props.details}` : this.props.details}}
       >
       </div>
     </div>;
