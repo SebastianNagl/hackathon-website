@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: legallovestech
+  namespace: legallovestech
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod-http01
+    kubernetes.io/ingress.class: traefik
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: legallovestech.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: legallovestech-frontend
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - legallovestech.de
+      secretName: legallovestech-tls
