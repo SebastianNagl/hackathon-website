@@ -24,7 +24,7 @@ export class AboutCard extends React.Component<Props, {}> {
         ' text-left p-6 pb-8' +
         ' 2xl:text-text-l text-center'}
       dangerouslySetInnerHTML={{__html:
-          `${this.props.info}<br />${this.props.details}`}}>
+          this.props.info ? `${this.props.info}<br />${this.props.details}` : this.props.details}}>
       </div>
     </div>;
   }

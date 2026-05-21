@@ -29,38 +29,32 @@ type Card = {
 export class About extends React.Component<Props, {}> {
   cards: Card[] = [
     {
-      title: 'Umfassend',
-      descriptionTop:
-        'Ein Kooperationsprojekt zwischen ML Tech e.V., der ' +
-        'Ludwig-Maximilians-Universität München (LMU) und der ' +
-        'Technischen Universität München (TUM).',
-      descriptionBottom: 'Der Legal Loves Tech Hackathon vereint und vernetzt ' +
-        'Studierende unter&shy;schiedlicher Fach&shy;richtungen und bietet ' +
-        'eine Plattform für inter&shy;disziplinäre Zusammenarbeit an der ' +
-        'Schnitt&shy;stelle von Recht und Technologie.',
+      title: 'Interdisziplinär',
+      descriptionTop: '',
+      descriptionBottom: 'Der Legal Loves Tech Hackathon bringt Studierende ' +
+        'aus Recht, Informatik und Wirtschaft zusammen und schafft eine ' +
+        'Plattform für die Zusammenarbeit an der Schnittstelle von Recht ' +
+        'und Technologie.',
       img: umfassendImg,
     },
     {
-      title: 'Non Profit',
-      descriptionTop:
-        'Eine Kooperation von Universitäten und gemeinnützigen Organisationen ' +
-        'unter der <strong>Schirmherrschaft des Bayerischen Staatsministers ' +
-        'der Justiz Georg Eisenreich, MdL</strong>.',
-      descriptionBottom: 'Wir glauben, dass Legal Tech dabei helfen kann die ' +
-        'Welt ein kleines Stückchen besser zu machen und möchten alle daran ' +
-        'teilhaben lassen. Im Mittelpunkt stehen das gemeinsame Engagement ' +
-        'und die Vermittlung von Wissen und Fähigkeiten rund um Legal Tech.',
+      title: 'Gemeinnützig',
+      descriptionTop: '',
+      descriptionBottom: 'Wir sind überzeugt: Legal Tech kann die Welt ein ' +
+        'Stück besser machen — und alle sollen daran teilhaben können. Im ' +
+        'Mittelpunkt stehen gemeinsames Engagement und die Vermittlung von ' +
+        'Wissen und Fähigkeiten rund um Legal Tech.',
       img: nonProfitImg,
     },
     {
-      title: 'Interdisziplinär',
-      descriptionTop: 'Vorträge, Workshops und Praxis&shy;einblicke von ' +
-        'führenden Expert:innen aus <strong>Recht, Technologie ' +
-        'und Wirtschaft</strong>.',
-      descriptionBottom: 'Egal auf wie viel Vorwissen die Teams aufbauen – ' +
-        'alle erforderlichen Kenntnisse werden direkt im Rahmen der ' +
-        'Hackathon-Woche vermittelt. Vorkenntnisse im Bereich Legal Tech ' +
-        'sind ausdrücklich keine Voraussetzung.',
+      title: 'Offen für alle',
+      descriptionTop: '',
+      descriptionBottom: 'Vorträge, Workshops und Praxiseinblicke von ' +
+        'führenden Expert:innen aus Recht, Technologie und Wirtschaft. ' +
+        'Ganz gleich, wie viel Vorwissen die Teams mitbringen — alle ' +
+        'erforderlichen Kenntnisse werden direkt in der Hackathon-Woche ' +
+        'vermittelt. Vorkenntnisse im Bereich Legal Tech sind ausdrücklich ' +
+        'keine Voraussetzung.',
       img: betreuungImg,
     },
   ];
