@@ -69,7 +69,7 @@ export class About extends React.Component<Props, {}> {
           'md:top-2 md:px-12 md:py-6 xl:top-8 xl:px-20'}>
                 About LLT
       </div>
-      <div className={'w-full h-5/6 bg-blue-3 py-4 flex justify-center ' +
+      <div className={'w-full h-5/6 bg-blue-3 pt-24 pb-4 md:py-4 flex justify-center ' +
           'items-center md:px-4'}>
         <div className={'block w-full h-full py-4 md:hidden'}>
           <Swiper

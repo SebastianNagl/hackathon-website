@@ -84,14 +84,14 @@ export class Join extends React.Component {
             </div>
 
             <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 mb-8'}>
-              <div className={'flex flex-row items-center gap-6 mb-6'}>
+              <div className={'flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-6'}>
                 <img
                   src={graduationCapIcon}
                   alt={'Teilnahme ohne Lehrveranstaltungsanrechnung'}
                   className={'h-12 w-auto object-contain flex-shrink-0'}
                 />
-                <p className={'text-text-m lg:text-text-l text-blue-12'}>
-                  <strong>Teilnahme ohne Lehrveranstaltungsanrechnung:</strong>{' '}
+                <p className={'text-text-m lg:text-text-l text-blue-12 text-left'}>
+                  <strong>Teilnahme ohne Lehrveranstaltungsanrechnung:</strong><br />
                   Du kannst auch ohne Anrechnung als Lehrveranstaltung am Hackathon teilnehmen –
                   melde dich über das Formular an, wenn du zu einer der folgenden Gruppen gehörst:
                 </p>

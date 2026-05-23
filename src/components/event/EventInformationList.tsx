@@ -52,8 +52,8 @@ const groups: Group[] = [
       </>,
 
       <>
-        <strong>LMU-Studierende der Juristischen Fakultät</strong>, die nicht an einem{' '}
-        <strong>Grundlagenseminar</strong> teilnehmen, sowie{' '}
+        <strong>LMU-Studierende der Juristischen Fakultät</strong>, die{' '}
+        <strong>nicht an einem Grundlagenseminar teilnehmen</strong>, sowie{' '}
         <strong>Studierende anderer Fakultäten</strong>, die sich nicht für die Module im LSF
         oder TUM-online anmelden können und keine Anrechnung für ihr Studium benötigen,
         sind ebenfalls herzlich willkommen.
