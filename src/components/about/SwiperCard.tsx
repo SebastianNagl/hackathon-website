@@ -17,11 +17,11 @@ export class SwiperCard extends React.Component<Props, {}> {
           className={'rounded-t'}
         />
       </div>
-      <div className={'pt-3 850-h:pt-6 text-head-m'}>
+      <div className={'pt-6 850-h:pt-8 px-6 text-head-m'}>
         {this.props.title}
       </div>
       <div className={'text-text-s 750-h:text-text-subtitle' +
-        ' 850-h:text-text-l text-left px-6 pt-2 850-h:text-justify'}
+        ' 850-h:text-text-l text-left px-6 pt-3 pb-8 850-h:text-justify'}
       dangerouslySetInnerHTML={{__html:
                this.props.info ? `${this.props.info}<br />${this.props.details}` : this.props.details}}
       >

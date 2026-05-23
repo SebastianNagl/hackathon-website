@@ -75,7 +75,7 @@ export class Partners extends React.Component {
 
     return <div id="partners-page" className={'relative mb-24 bg-blue-7 py-8'}>
       <div className={'absolute top-8 left-0 rounded-r z-10 bg-blue-12 ' +
-        'text-blue-1 text-3xl px-20 py-6'}>
+        'text-blue-1 text-3xl px-8 py-4 whitespace-nowrap md:px-20 md:py-6'}>
         Previous Partners
       </div>
 

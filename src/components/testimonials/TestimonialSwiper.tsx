@@ -12,14 +12,14 @@ export class TestimonialSwiper extends React.Component<Props, {}> {
     return <div className="w-3/4 md:w-2/3 h-full mx-auto ">
       <div className={'w-full mt-16 mb-0 relative h-full flex' +
         ' flex-col justify-center align-middle items-center'}>
-        <div className={classNames('absolute xl:top-20' +
-          ' sm:top-1/4 -translate-y-1/2' +
+        <div className={classNames('sm:absolute xl:top-20' +
+          ' sm:top-1/4 sm:-translate-y-1/2' +
           ' xl:translate-y-0 xl:h-56 xl:w-56 md:h-40' +
-          ' md:w-40 w-28 h-28 ',
+          ' md:w-40 w-28 h-28 mb-4 sm:mb-0',
           this.props.i % 2 ?
           'xl:-left-28 md:-left-20' :
           'xl:-right-28 md:-right-20',
-          this.props.testimonial.isTooBig ? 'top-[12%]' : 'top-[17%]')}>
+          this.props.testimonial.isTooBig ? 'sm:top-[12%]' : 'sm:top-[17%]')}>
           <div className={classNames('bg-contain bg-brackets h-full' +
             ' xl:h-56 xl:w-56 md:h-40' +
             ' md:w-40 w-28 h-28 bg-no-repeat bg-center flex' +
