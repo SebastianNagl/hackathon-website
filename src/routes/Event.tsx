@@ -1,5 +1,6 @@
 import React from 'react';
 import {EventInformationList} from '../components/event/EventInformationList';
+import {EventSchedule} from '../components/event/EventSchedule';
 import {EventTitle} from '../components/event/EventTitle';
 import {Footer} from '../components/footer/Footer';
 
@@ -62,10 +63,7 @@ export class Event extends React.Component {
             Ablaufplan
           </div>
 
-          <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
-            'text-text-m lg:text-text-l text-blue-12 mb-8'}>
-            Der detaillierte Ablaufplan wird in Kürze veröffentlicht.
-          </div>
+          <EventSchedule/>
 
         </div>
 
