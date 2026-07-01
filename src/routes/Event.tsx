@@ -1,5 +1,6 @@
 import React from 'react';
 import {EventInformationList} from '../components/event/EventInformationList';
+import {EventSchedule} from '../components/event/EventSchedule';
 import {EventTitle} from '../components/event/EventTitle';
 import {Footer} from '../components/footer/Footer';
 
@@ -27,45 +28,10 @@ export class Event extends React.Component {
           <div className={'w-full h-1 bg-blue-12 rounded mt-8'} />
 
           <div className={'py-8 mt-4 text-head-m lg:text-head-l font-bold'}>
-            Inhaltliche Programmschwerpunkte
-          </div>
-
-          <ul className={'list-disc text-text-m lg:text-text-l'}>
-            <li className="pb-4">
-              <strong>Einführung in Legal Tech</strong> – Überblick über
-              Einsatzmöglichkeiten auf dem Rechtsmarkt, aktuelle
-              KI-Entwicklungen und rechtliche Rahmenbedingungen.
-            </li>
-            <li className="pb-4">
-              <strong>Workshops: Product Development</strong> – Agiles Arbeiten,
-              Ideenentwicklung &amp; Prototyping, Legal Design Thinking und
-              Pitch-Training.
-            </li>
-            <li className="pb-4">
-              <strong>Legal Challenges</strong> – Juristische Einführungen in
-              die Praxisaufgaben aus den Bereichen Verbraucherrecht, Verwaltung
-              &amp; Justiz sowie Wirtschaftsunternehmen.
-            </li>
-            <li className="pb-4">
-              <strong>Tech Basics</strong> – Legal Reasoning &amp; Künstliche
-              Intelligenz (inkl. Legal Prompting) sowie KI-gestütztes Coding.
-              Vorkenntnisse nicht erforderlich.
-            </li>
-            <li>
-              <strong>Open-Table-Discussions</strong> – Offene
-              Gesprächsformate mit Gründer:innen und Investor:innen aus der
-              Legal-Tech-Szene.
-            </li>
-          </ul>
-
-          <div className={'py-8 mt-8 text-head-m lg:text-head-l font-bold'}>
             Ablaufplan
           </div>
 
-          <div className={'bg-blue-3 border border-blue-12 rounded px-8 py-6 ' +
-            'text-text-m lg:text-text-l text-blue-12 mb-8'}>
-            Der detaillierte Ablaufplan wird in Kürze veröffentlicht.
-          </div>
+          <EventSchedule/>
 
         </div>
 
