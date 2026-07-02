@@ -7,6 +7,16 @@ import graduationCapIcon from '../img/icons/graduation-cap.svg';
 import paragraphIcon from '../img/icons/paragraph.svg';
 
 export class Join extends React.Component {
+  componentDidMount() {
+    if (!document.getElementById('luma-checkout')) {
+      const script = document.createElement('script');
+      script.id = 'luma-checkout';
+      script.src = 'https://embed.lu.ma/checkout-button.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }
+
   render() {
     return (
       <div className={'overflow-x-hidden min-h-screen flex flex-col'}>
@@ -106,13 +116,12 @@ export class Join extends React.Component {
               </ul>
               <div className={'flex justify-center'}>
                 <a
-                  href={'https://docs.google.com/forms/d/e/1FAIpQLSdwxtQDjrti6N6H-n3NAwy2yNdibFpil3RYLG6s_XtFJ5VKoA/viewform?usp=publish-editor'}
-                  className={'text-white px-6 py-2 rounded font-bold text-text-m hover:opacity-80 transition-opacity'}
-                  style={{backgroundColor: '#0545AF'}}
-                  target={'_blank'}
-                  rel={'noreferrer'}
+                  href={'https://luma.com/event/evt-MXsyhtuEth5U89U'}
+                  className={'luma-checkout--button'}
+                  data-luma-action={'checkout'}
+                  data-luma-event-id={'evt-MXsyhtuEth5U89U'}
                 >
-                  Anmeldung
+                  Für Warteliste anmelden
                 </a>
               </div>
             </div>
