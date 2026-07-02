@@ -39,7 +39,7 @@ type FrameworkEvent = {
 const days: Day[] = [
   {
     date: 'Montag, 17.08.2026',
-    roomTentative: true,
+    room: 'TUM ThinkTank, Richard-Wagner-Straße 1',
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
@@ -87,7 +87,7 @@ const days: Day[] = [
   },
   {
     date: 'Mittwoch, 19.08.2026',
-    room: 'Richard-Wagner-Str. 1 (H.001)',
+    room: 'TUM ThinkTank, Richard-Wagner-Straße 1',
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
@@ -135,7 +135,7 @@ const days: Day[] = [
   },
   {
     date: 'Freitag, 21.08.2026',
-    room: 'Richard-Wagner-Str. 1 (H.001)',
+    room: 'TUM ThinkTank, Richard-Wagner-Straße 1',
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
