@@ -91,9 +91,8 @@ const days: Day[] = [
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
-        title: 'Wirtschaft und Verwaltung',
-        speaker: 'Franziska Ruppert',
-        institution: 'IHK München und Oberbayern',
+        title: 'Coding I',
+        speaker: 'Sebastian Nagl',
       },
       lunchBreak,
       {
@@ -115,8 +114,7 @@ const days: Day[] = [
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
-        timeTentative: true,
-        title: 'Coding I',
+        title: 'Coding II',
         speaker: 'Sebastian Nagl',
       },
       lunchBreak,
@@ -139,21 +137,14 @@ const days: Day[] = [
     sessions: [
       {
         time: '10–12 Uhr (c.t.)',
-        timeTentative: true,
-        title: 'Coding II',
-        speaker: 'Sebastian Nagl',
-      },
-      lunchBreak,
-      {
-        time: '13–15 Uhr (c.t.)',
         title: 'Legal Reasoning and Artificial Intelligence',
         speaker: 'Niklas Wais',
         institution: 'TUM',
       },
+      lunchBreak,
       {
-        time: '15–17 Uhr (c.t.)',
+        time: '13–15 Uhr (c.t.)',
         title: 'Workshop: Pitch Training',
-        titleTentative: true,
       },
     ],
   },
