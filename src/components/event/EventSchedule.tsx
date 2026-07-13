@@ -49,7 +49,6 @@ const days: Day[] = [
       lunchBreak,
       {
         time: '13–15 Uhr (c.t.)',
-        timeTentative: true,
         title: 'Legal Tech Potenziale',
         speaker: 'Bernhard Waltl',
         institution: 'Liquid Legal Institute',
@@ -145,6 +144,8 @@ const days: Day[] = [
       {
         time: '13–15 Uhr (c.t.)',
         title: 'Workshop: Pitch Training',
+        speaker: 'Lisa Schebitz',
+        institution: 'UnternehmerTUM',
       },
     ],
   },
@@ -182,7 +183,7 @@ export class EventSchedule extends React.Component {
           <strong>vorläufig</strong>. Themen, Referent:innen, Räume und
           Uhrzeiten können sich noch ändern. Punkte, die noch nicht final
           bestätigt sind, sind mit <Tentative/> gekennzeichnet. Alle
-          Uhrzeiten verstehen sich als akademische Viertelstunden
+          Uhrzeiten verstehen sich als akademische Stunden
           (c.t. = cum tempore) – Beginn jeweils 15 Minuten nach der
           genannten Zeit.
         </div>
