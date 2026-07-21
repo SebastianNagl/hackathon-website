@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export class ShortInfo extends React.Component {
   render() {
@@ -16,6 +17,16 @@ export class ShortInfo extends React.Component {
           'Studierende. Offen und inklusiv. Non-Profit. In Präsenz. Und das ' +
           'Beste: Nur dein Interesse genügt – wir bringen dir alles bei!'}
       </div>
+
+      <Link
+        id={'shortInfoLink'}
+        to={'/event#ablaufplan'}
+        className={'inline-block mt-2 mb-8 text-white px-6 py-2 rounded font-bold ' +
+          'text-text-m hover:opacity-80 transition-opacity'}
+        style={{backgroundColor: '#0545AF'}}
+      >
+        Zum Ablaufplan
+      </Link>
 
     </div>;
   }
