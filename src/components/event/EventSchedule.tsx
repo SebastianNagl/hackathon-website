@@ -203,8 +203,7 @@ const frameworkEvents: FrameworkEvent[] = [
         time: '10:45–11:00 Uhr',
         title: 'Vorstellung der Jury',
         speaker: 'Dr. Ann-Kristin Mayrhofer',
-        institution: 'Lehrstuhl für Bürgerliches Recht, Zivilverfahrensrecht, ' +
-          'Europäisches Privat- und Verfahrensrecht an der LMU',
+        institution: 'LMU',
       },
       {
         time: '11:00–12:00 Uhr',
