@@ -6,6 +6,13 @@ import {Footer} from '../components/footer/Footer';
 
 // entrypoint for the event page (path: /event)
 export class Event extends React.Component {
+  componentDidMount() {
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      target?.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
   render() {
     return <div className={'overflow-x-hidden min-h-screen flex flex-col'}>
 
@@ -27,7 +34,7 @@ export class Event extends React.Component {
 
           <div className={'w-full h-1 bg-blue-12 rounded mt-8'} />
 
-          <div className={'py-8 mt-4 text-head-m lg:text-head-l font-bold'}>
+          <div id={'ablaufplan'} className={'py-8 mt-4 text-head-m lg:text-head-l font-bold'}>
             Ablaufplan
           </div>
 
