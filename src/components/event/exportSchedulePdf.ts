@@ -30,10 +30,19 @@ const rasterizeImage = (src: string): Promise<RasterizedImage> =>
     img.src = src;
   });
 
-// renders the given DOM element (the Stundenplan grid) into a landscape PDF,
-// with the Hackathon logo in the header
+type ExportOptions = {
+  element: HTMLElement;
+  title: string;
+  filename: string;
+  orientation?: 'landscape' | 'portrait';
+};
+
+// renders the given DOM element into an A4 PDF, with the Hackathon logo
+// and a title in the header
 // jspdf/html2canvas are loaded on demand so they don't bloat the main bundle
-export const exportSchedulePdf = async (element: HTMLElement) => {
+export const exportSchedulePdf = async ({
+  element, title, filename, orientation = 'landscape',
+}: ExportOptions) => {
   const [{default: html2canvas}, {default: JsPdf}, logoImage] = await Promise.all([
     import('html2canvas'),
     import('jspdf'),
@@ -42,7 +51,7 @@ export const exportSchedulePdf = async (element: HTMLElement) => {
 
   const canvas = await html2canvas(element, {backgroundColor: '#ffffff', scale: 2});
 
-  const pdf = new JsPdf({orientation: 'landscape', unit: 'pt', format: 'a4'});
+  const pdf = new JsPdf({orientation, unit: 'pt', format: 'a4'});
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
   const margin = 24;
@@ -53,17 +62,15 @@ export const exportSchedulePdf = async (element: HTMLElement) => {
 
   pdf.setFontSize(14);
   pdf.setTextColor('#00254D');
-  pdf.text(
-      'Ablaufplan – Legal Loves Tech Hackathon 2026',
-      margin + logoWidth + 14,
-      margin + logoHeight / 2 + 5,
-  );
+  pdf.text(title, margin + logoWidth + 14, margin + logoHeight / 2 + 5);
 
   const contentTop = margin + logoHeight + 16;
   const availableWidth = pageWidth - margin * 2;
   const availableHeight = pageHeight - contentTop - margin;
 
-  const gridImage = canvas.toDataURL('image/png');
+  // JPEG keeps the file size manageable - the captured content is opaque
+  // (white background), so there's no transparency to lose
+  const contentImage = canvas.toDataURL('image/jpeg', 0.9);
   const scale = Math.min(
       availableWidth / canvas.width,
       availableHeight / canvas.height,
@@ -73,7 +80,7 @@ export const exportSchedulePdf = async (element: HTMLElement) => {
   const imgHeight = canvas.height * scale;
   const imgX = margin + (availableWidth - imgWidth) / 2;
 
-  pdf.addImage(gridImage, 'PNG', imgX, contentTop, imgWidth, imgHeight);
+  pdf.addImage(contentImage, 'JPEG', imgX, contentTop, imgWidth, imgHeight);
 
-  pdf.save('llt-hackathon-2026-stundenplan.pdf');
+  pdf.save(filename);
 };

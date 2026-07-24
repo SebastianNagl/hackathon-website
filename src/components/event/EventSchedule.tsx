@@ -1,22 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {AbschlussveranstaltungSchedule} from './AbschlussveranstaltungSchedule';
 import {exportSchedulePdf} from './exportSchedulePdf';
-
-type Session = {
-  time: string;
-  timeTentative?: boolean;
-  title: string;
-  titleTentative?: boolean;
-  speaker?: string;
-  institution?: string;
-  note?: string;
-  isBreak?: boolean;
-  // Stundenplan-only overrides: shows a merged summary block instead of the
-  // detailed entry (which still appears as-is in the Listen-Ansicht)
-  gridTitle?: string;
-  gridEnd?: string;
-  hideInGrid?: boolean;
-};
+import {
+  FrameworkEvent, InfoNote, renderSession, Session, Tentative,
+} from './scheduleShared';
 
 const lunchBreak: Session = {
   time: '12:00–13:00 Uhr',
@@ -30,18 +19,6 @@ type Day = {
   roomTentative?: boolean;
   note?: string;
   sessions: Session[];
-};
-
-type FrameworkEvent = {
-  date: string;
-  dateTentative?: boolean;
-  title: string;
-  speaker?: string;
-  institution?: string;
-  time?: string;
-  room?: string;
-  note?: string;
-  sessions?: Session[];
 };
 
 // Vorläufiger Ablaufplan (Stand: Juli 2026). Einzelne Angaben sind noch
@@ -194,69 +171,6 @@ const days: Day[] = [
   },
 ];
 
-const frameworkEvents: FrameworkEvent[] = [
-  {
-    date: '27.08.2026',
-    title: 'Pitches',
-    room: 'Freskensaal (LMU, Ludwigstraße 28, Raum 115)',
-    sessions: [
-      {
-        time: '10:15–10:35 Uhr',
-        title: 'Eröffnung der Abschlussveranstaltung',
-        speaker: 'Luca Ballmann, Felicitas Bingger, Enci Huang',
-      },
-      {
-        time: '10:35–10:45 Uhr',
-        title: 'Grußwort',
-        speaker: 'Ministerialdirektor Dr. Winfried Brechmann',
-        institution: 'Bayerisches Staatsministerium der Justiz',
-      },
-      {
-        time: '10:45–11:00 Uhr',
-        title: 'Vorstellung der Jury',
-        speaker: 'Dr. Ann-Kristin Mayrhofer',
-        institution: 'LMU',
-      },
-      {
-        time: '11:00–12:00 Uhr',
-        title: 'Pitches',
-      },
-      {
-        time: '12:00–13:30 Uhr',
-        title: 'Mittagessen',
-        note: 'Mittagessen wird bereitgestellt.',
-        isBreak: true,
-      },
-      {
-        time: '13:30–15:00 Uhr',
-        title: 'Pitches',
-      },
-      {
-        time: '15:00–15:30 Uhr',
-        title: 'Kaffeepause',
-        isBreak: true,
-      },
-      {
-        time: '15:30–17:00 Uhr',
-        title: 'Pitches',
-      },
-      {
-        time: '17:00–17:30 Uhr',
-        title: 'Beratungen der Jury',
-      },
-      {
-        time: '17:30–18:00 Uhr',
-        title: 'Siegerehrung',
-      },
-      {
-        time: '18:00 Uhr – open end',
-        title: 'Ausklingen der Veranstaltung',
-        note: 'Snacks und Getränke werden bereitgestellt.',
-      },
-    ],
-  },
-];
-
 const awardsCeremony: FrameworkEvent = {
   date: '05.10.2026',
   title: 'Siegerehrung / Preisverleihung',
@@ -264,59 +178,6 @@ const awardsCeremony: FrameworkEvent = {
   institution: 'Bayerischer Staatsminister der Justiz',
   room: 'Justizpalast, Prielmayerstraße 7, 80335 München-Maxvorstadt',
 };
-
-const Tentative = ({label = 'vorläufig'}: {label?: string}) => (
-  <span className={'inline-block align-middle text-text-caption font-semibold ' +
-    'text-amber-11 bg-amber-3 border border-amber-9 rounded px-2 py-0.5 ml-2 whitespace-nowrap'}>
-    {label}
-  </span>
-);
-
-const InfoNote = ({children}: {children: React.ReactNode}) => (
-  <span className={'inline-block align-middle not-italic text-text-caption font-semibold ' +
-    'text-green-11 bg-green-3 border border-green-9 rounded px-2 py-0.5 whitespace-nowrap'}>
-    {children}
-  </span>
-);
-
-const renderSession = (session: Session, i: number) => (
-  session.isBreak ? (
-    <div key={i} className={'flex flex-col md:flex-row md:items-baseline ' +
-      'gap-1 md:gap-6 py-2 border-b border-blue-5 last:border-b-0 ' +
-      'text-text-s-m text-blue-11 italic'}>
-      <div className={'md:w-44 shrink-0'}>{session.time}</div>
-      <div>
-        <div>{session.title}</div>
-        {session.note && (
-          <div className={'mt-1'}><InfoNote>{session.note}</InfoNote></div>
-        )}
-      </div>
-    </div>
-  ) : (
-    <div key={i} className={'flex flex-col md:flex-row md:items-baseline ' +
-      'gap-1 md:gap-6 py-3 border-b border-blue-5 last:border-b-0'}>
-      <div className={'md:w-44 shrink-0 font-semibold text-blue-12 ' +
-        'text-text-m lg:text-text-l'}>
-        {session.time}
-        {session.timeTentative && <Tentative/>}
-      </div>
-      <div className={'text-text-m lg:text-text-l'}>
-        <div className={'font-semibold'}>
-          {session.title}
-          {session.titleTentative && <Tentative/>}
-        </div>
-        {(session.speaker || session.institution) && (
-          <div className={'text-text-s-m text-blue-11'}>
-            {[session.speaker, session.institution].filter(Boolean).join(' – ')}
-          </div>
-        )}
-        {session.note && (
-          <div className={'mt-1'}><InfoNote>{session.note}</InfoNote></div>
-        )}
-      </div>
-    </div>
-  )
-);
 
 // timetable grid covers 10:00-17:30 in 15-minute slots
 const GRID_START_MIN = 10 * 60;
@@ -355,9 +216,13 @@ const gridHours = Array.from(
     (_, i) => GRID_START_MIN / 60 + i,
 );
 
-const WeekGrid = () => (
+// forwards the ref to the inner, full-width grid (not the outer scroll
+// wrapper) so html2canvas captures the complete timetable even on mobile,
+// where the wrapper's visible width would otherwise clip the export
+const WeekGrid = React.forwardRef<HTMLDivElement>((_props, ref) => (
   <div className={'overflow-x-auto'}>
     <div
+      ref={ref}
       className={'grid min-w-[760px]'}
       style={{
         gridTemplateColumns: '52px repeat(5, minmax(0, 1fr))',
@@ -462,7 +327,8 @@ const WeekGrid = () => (
       )}
     </div>
   </div>
-);
+));
+WeekGrid.displayName = 'WeekGrid';
 
 type ViewMode = 'list' | 'grid';
 
@@ -472,8 +338,11 @@ export class EventSchedule extends React.Component<{}, {view: ViewMode}> {
 
   handleExportPdf = () => {
     if (this.gridRef.current) {
-      exportSchedulePdf(this.gridRef.current)
-          .catch((err) => console.error('PDF-Export fehlgeschlagen', err));
+      exportSchedulePdf({
+        element: this.gridRef.current,
+        title: 'Ablaufplan – Legal Loves Tech Hackathon 2026',
+        filename: 'llt-hackathon-2026-stundenplan.pdf',
+      }).catch((err) => console.error('PDF-Export fehlgeschlagen', err));
     }
   };
 
@@ -517,11 +386,7 @@ export class EventSchedule extends React.Component<{}, {view: ViewMode}> {
           )}
         </div>
 
-        {view === 'grid' && (
-          <div ref={this.gridRef}>
-            <WeekGrid/>
-          </div>
-        )}
+        {view === 'grid' && <WeekGrid ref={this.gridRef}/>}
 
         {view === 'list' && days.map((day) => (
           <div key={day.date}>
@@ -543,58 +408,20 @@ export class EventSchedule extends React.Component<{}, {view: ViewMode}> {
           </div>
         ))}
 
-        <div>
+        <div id={'abschlussveranstaltung'}>
           <div className={'w-full h-1 bg-blue-12 rounded mb-4'} />
-          <div className={'text-head-s lg:text-head-m font-bold text-blue-12 mb-3'}>
-            Abschlussveranstaltung
+          <div className={'flex flex-wrap items-baseline justify-between gap-2 mb-3'}>
+            <div className={'text-head-s lg:text-head-m font-bold text-blue-12'}>
+              Abschlussveranstaltung
+            </div>
+            <Link
+              to={'/abschlussveranstaltung#anmeldung'}
+              className={'underline font-semibold text-blue-11 hover:text-blue-12'}
+            >
+              Als Besucher:in anmelden →
+            </Link>
           </div>
-          {frameworkEvents.map((event, i) => (
-            event.sessions ? (
-              <div key={i} className={i > 0 ? 'mt-8' : ''}>
-                <div className={'flex flex-wrap items-baseline justify-between gap-2 mb-3'}>
-                  <div className={'text-text-m lg:text-text-l font-semibold text-blue-12'}>
-                    {event.title} – {event.date}
-                    {event.dateTentative && <Tentative label={'Termin vorläufig'}/>}
-                  </div>
-                  {event.room && (
-                    <div className={'text-text-s-m lg:text-text-m text-blue-11'}>
-                      Raum: {event.room}
-                    </div>
-                  )}
-                </div>
-                {event.note && (
-                  <div className={'mb-3'}><InfoNote>{event.note}</InfoNote></div>
-                )}
-                <div className={'flex flex-col'}>
-                  {event.sessions.map(renderSession)}
-                </div>
-              </div>
-            ) : (
-              <div key={i} className={'flex flex-col md:flex-row md:items-baseline ' +
-                'gap-1 md:gap-6 py-3 border-b border-blue-5 last:border-b-0'}>
-                <div className={'md:w-44 shrink-0 font-semibold text-blue-12 ' +
-                  'text-text-m lg:text-text-l'}>
-                  {event.date}
-                  {event.dateTentative && <Tentative label={'Termin vorläufig'}/>}
-                </div>
-                <div className={'text-text-m lg:text-text-l'}>
-                  <div className={'font-semibold'}>{event.title}</div>
-                  {(event.speaker || event.institution) && (
-                    <div className={'text-text-s-m text-blue-11'}>
-                      {[event.speaker, event.institution].filter(Boolean).join(' – ')}
-                    </div>
-                  )}
-                  <div className={'text-text-s text-blue-11'}>
-                    Uhrzeit: {event.time ?? 'wird noch bekanntgegeben'}
-                    {event.room && ` · Raum: ${event.room}`}
-                  </div>
-                  {event.note && (
-                    <div className={'mt-1'}><InfoNote>{event.note}</InfoNote></div>
-                  )}
-                </div>
-              </div>
-            )
-          ))}
+          <AbschlussveranstaltungSchedule/>
         </div>
 
         <div>
