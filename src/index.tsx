@@ -4,6 +4,7 @@ import './index.css';
 import {Home} from './routes/Home';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Navigation} from './components/navigation/Navigation';
+import {Abschlussveranstaltung} from './routes/Abschlussveranstaltung';
 import {Event} from './routes/Event';
 import {Imprint} from './routes/Imprint';
 import {Join} from './routes/Join';
@@ -26,6 +27,7 @@ root.render(
         <Routes>
           <Route path={'/'} element={<Home />} />
           <Route path={'/event'} element={<Event />} />
+          <Route path={'/abschlussveranstaltung'} element={<Abschlussveranstaltung />} />
           <Route path={'/team'} element={<Team />} />
           <Route path={'/jury'} element={<Jury2026 />} />
           <Route path={'/result'} element={<Recap2023 />} />

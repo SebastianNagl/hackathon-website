@@ -18,15 +18,25 @@ export class ShortInfo extends React.Component {
           'Beste: Nur dein Interesse genügt – wir bringen dir alles bei!'}
       </div>
 
-      <Link
-        id={'shortInfoLink'}
-        to={'/event#ablaufplan'}
-        className={'inline-block mt-2 mb-8 text-white px-6 py-2 rounded font-bold ' +
-          'text-text-m hover:opacity-80 transition-opacity'}
-        style={{backgroundColor: '#0545AF'}}
-      >
-        Zum Ablaufplan
-      </Link>
+      <div id={'shortInfoLink'} className={'flex flex-wrap gap-4 mt-2 mb-8'}>
+        <Link
+          to={'/event#ablaufplan'}
+          className={'inline-block text-white px-6 py-2 rounded font-bold ' +
+            'text-text-m hover:opacity-80 transition-opacity'}
+          style={{backgroundColor: '#0545AF'}}
+        >
+          Zum Ablaufplan
+        </Link>
+
+        <Link
+          to={'/abschlussveranstaltung'}
+          className={'inline-block text-white px-6 py-2 rounded font-bold ' +
+            'text-text-m hover:opacity-80 transition-opacity'}
+          style={{backgroundColor: '#0545AF'}}
+        >
+          Als Besucher:in anmelden
+        </Link>
+      </div>
 
     </div>;
   }

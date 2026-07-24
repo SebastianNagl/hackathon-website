@@ -12,8 +12,8 @@ const groups: Group[] = [
       <>
         Der Legal Loves Tech Hackathon 2026 findet vom{' '}
         <strong>17. bis 21. August 2026</strong> in Präsenz in München statt.
-        Der abschließende Präsentationstag ist für den{' '}
-        <strong>27. August 2026</strong> vorgesehen.
+        Der abschließende Präsentationstag findet am{' '}
+        <strong>27. August 2026</strong> statt.
       </>,
 
       <>
@@ -71,17 +71,21 @@ const groups: Group[] = [
   {
     heading: 'Ablauf',
     items: [
-      <>Die Teameinteilung findet am <strong>ersten Tag</strong> des Hackathons statt.</>,
+      <>
+        Die Teameinteilung findet am <strong>ersten Tag</strong> des
+        Hackathons (<strong>17.8.2026</strong>) im Rahmen von „Mittagessen
+        und Teambildung" statt.
+      </>,
 
       <>
-        Am Ende der Woche präsentieren die Teams ihre Legal-Tech-Lösungen vor
+        Am <strong>27.8.2026</strong> präsentieren die Teams ihre Legal-Tech-Lösungen vor
         einer <strong>interdisziplinären Fachjury</strong>. Die drei besten Teams
         werden mit einem <strong>Preisgeld sowie einer Urkunde und einem Pokal</strong> ausgezeichnet.
       </>,
 
       <>
-        Die Gewinnerteams werden ihren Prototypen im{' '}
-        <strong>Justizpalast</strong> vor dem{' '}
+        Am <strong>5.10.2026</strong> werden die Gewinnerteams ihren
+        Prototypen im <strong>Justizpalast</strong> vor dem{' '}
         <strong>Staatsminister der Justiz</strong> pitchen.
       </>,
     ],
