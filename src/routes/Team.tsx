@@ -48,6 +48,13 @@ export class Team extends React.Component {
           linkedIn: 'https://www.linkedin.com/in/enci-huang-%E9%BB%83%E6%81%A9%E8%B3%9C-14009b229/',
           backgroundClass: 'enci-pic',
         },
+        {
+          name: 'Luis Hettrich',
+          shortDesc: 'Vorstandsmitglied',
+          email: 'luis.hettrich@ml-tech.org',
+          linkedIn: 'https://www.linkedin.com/in/luis-hettrich-26ba87296/',
+          backgroundClass: 'luis-pic',
+        },
       ],
     },
     {

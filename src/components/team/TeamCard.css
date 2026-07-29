@@ -85,3 +85,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.luis-pic {
+    background: url("../../img/teamMembers/luis_hettrich.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
