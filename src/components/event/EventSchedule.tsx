@@ -83,20 +83,24 @@ const days: Day[] = [
     room: 'LMU, Ludwigstr. 28, Raum 122 RGB',
     sessions: [
       {
-        time: '10:15–11:45 Uhr',
+        time: '10:00–13:00 Uhr',
         title: 'Legal Design',
         speaker: 'Prof. Dr. Christian Djeffal',
         institution: 'TUM',
       },
-      lunchBreak,
       {
-        time: '13:15–14:00 Uhr',
+        time: '13:00–14:00 Uhr',
+        title: 'Mittagspause',
+        isBreak: true,
+      },
+      {
+        time: '14:15–15:00 Uhr',
         title: 'Rechtliche Rahmenbedingungen: Was darf Legal Tech? (I)',
         speaker: 'Nikolaus Bauer',
         institution: 'LMU',
       },
       {
-        time: '14:15–15:45 Uhr',
+        time: '15:15–16:45 Uhr',
         title: 'Rechtliche Rahmenbedingungen: Was darf Legal Tech? (II)',
         speaker: 'Dr. Tristan Radtke',
         institution: 'TUM',
