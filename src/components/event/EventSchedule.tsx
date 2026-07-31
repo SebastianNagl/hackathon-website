@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import {Link} from 'react-router-dom';
+import aoShearmanLogo from '../../img/partners/AOShearman.png';
 import {AbschlussveranstaltungSchedule} from './AbschlussveranstaltungSchedule';
 import {exportSchedulePdf} from './exportSchedulePdf';
 import {
@@ -56,7 +57,8 @@ const days: Day[] = [
       {
         time: '12:00–14:00 Uhr',
         title: 'Mittagessen und Teambildung',
-        note: 'Mittagessen wird bereitgestellt.',
+        note: 'Mittagessen gesponsert von',
+        sponsorLogo: aoShearmanLogo,
         isBreak: true,
       },
       {
@@ -119,7 +121,7 @@ const days: Day[] = [
       lunchBreak,
       {
         time: '13:15–14:45 Uhr',
-        title: 'Verbraucherrecht',
+        title: 'Challenges: Verbraucherrecht',
         speaker: 'Simone Bueb',
         institution: 'Verbraucherzentrale Bayern',
       },
@@ -142,7 +144,7 @@ const days: Day[] = [
       lunchBreak,
       {
         time: '13:15–14:45 Uhr',
-        title: 'Justiz',
+        title: 'Challenges: Justiz',
         speaker: 'Maximilian Kruger',
         institution: 'Bayerisches Staatsministerium der Justiz (StMJ)',
       },
@@ -314,9 +316,17 @@ const WeekGrid = React.forwardRef<HTMLDivElement>((_props, ref) => (
                 </div>
               )}
               {!isCompact && session.note && (
-                <div className={'text-text-overline leading-tight not-italic ' +
-                  'whitespace-normal break-words text-green-11 font-semibold'}>
-                  {session.note}
+                <div className={'flex items-center gap-1 text-text-overline ' +
+                  'leading-tight not-italic whitespace-normal break-words ' +
+                  'text-green-11 font-semibold'}>
+                  <span>{session.note}</span>
+                  {session.sponsorLogo && (
+                    <img
+                      src={session.sponsorLogo}
+                      alt={''}
+                      className={'h-3 w-auto object-contain'}
+                    />
+                  )}
                 </div>
               )}
               {tentative && (

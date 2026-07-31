@@ -4,6 +4,7 @@ import {Footer} from '../components/footer/Footer';
 import {AbschlussveranstaltungHero} from '../components/info/AbschlussveranstaltungHero';
 import {AccessToJustice} from '../components/info/AccessToJustice';
 import {Info} from '../components/info/Info';
+import {CurrentPartners} from '../components/partners/CurrentPartners';
 import {Partners} from '../components/partners/Partners';
 import {Testimonials} from '../components/testimonials/Testimonials';
 
@@ -30,6 +31,7 @@ export class Home extends React.Component {
       <About scrollTo={this.scrollTo} />
       <AbschlussveranstaltungHero />
       <Testimonials scrollTo={this.scrollTo} />
+      <CurrentPartners />
       <Partners />
       <Footer backgroundColor={'blue'} />
     </div>;
