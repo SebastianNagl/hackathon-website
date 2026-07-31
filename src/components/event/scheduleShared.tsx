@@ -1,4 +1,5 @@
 import React from 'react';
+import bayshoreLogo from '../../img/partners/Bayshore_Logotype_Dark.png';
 
 export type Session = {
   time: string;
@@ -8,6 +9,8 @@ export type Session = {
   speaker?: string;
   institution?: string;
   note?: string;
+  // logo shown next to the note, e.g. for a meal sponsor
+  sponsorLogo?: string;
   isBreak?: boolean;
   // Stundenplan-only overrides: shows a merged summary block instead of the
   // detailed entry (which still appears as-is in the Listen-Ansicht)
@@ -60,7 +63,8 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
     {
       time: '12:00–13:30 Uhr',
       title: 'Mittagessen',
-      note: 'Mittagessen wird bereitgestellt.',
+      note: 'Mittagessen gesponsert von',
+      sponsorLogo: bayshoreLogo,
       isBreak: true,
     },
     {
@@ -101,10 +105,14 @@ export const Tentative = ({label = 'vorläufig'}: {label?: string}) => (
   </span>
 );
 
-export const InfoNote = ({children}: {children: React.ReactNode}) => (
-  <span className={'inline-flex items-center not-italic text-text-caption font-semibold ' +
-    'text-green-11 bg-green-3 border border-green-9 rounded px-2 py-0.5 whitespace-nowrap'}>
+export const InfoNote = (
+    {children, logo}: {children: React.ReactNode; logo?: string},
+) => (
+  <span className={'inline-flex items-center gap-2 not-italic text-text-caption ' +
+    'font-semibold text-green-11 bg-green-3 border border-green-9 rounded ' +
+    'px-2 py-0.5 whitespace-nowrap'}>
     {children}
+    {logo && <img src={logo} alt={''} className={'h-4 w-auto object-contain'}/>}
   </span>
 );
 
@@ -117,7 +125,9 @@ export const renderSession = (session: Session, i: number) => (
       <div>
         <div>{session.title}</div>
         {session.note && (
-          <div className={'mt-1'}><InfoNote>{session.note}</InfoNote></div>
+          <div className={'mt-1'}>
+            <InfoNote logo={session.sponsorLogo}>{session.note}</InfoNote>
+          </div>
         )}
       </div>
     </div>
@@ -140,7 +150,9 @@ export const renderSession = (session: Session, i: number) => (
           </div>
         )}
         {session.note && (
-          <div className={'mt-1'}><InfoNote>{session.note}</InfoNote></div>
+          <div className={'mt-1'}>
+            <InfoNote logo={session.sponsorLogo}>{session.note}</InfoNote>
+          </div>
         )}
       </div>
     </div>
