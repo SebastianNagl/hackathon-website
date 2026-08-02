@@ -85,7 +85,7 @@ const days: Day[] = [
     room: 'LMU, Ludwigstr. 28, Raum 122 RGB',
     sessions: [
       {
-        time: '10:00–13:00 Uhr',
+        time: '10:15–13:00 Uhr',
         title: 'Legal Design',
         speaker: 'Prof. Dr. Christian Djeffal',
         institution: 'TUM',
@@ -124,11 +124,6 @@ const days: Day[] = [
         title: 'Challenges: Verbraucherrecht',
         speaker: 'Simone Bueb',
         institution: 'Verbraucherzentrale Bayern',
-      },
-      {
-        time: '15:15–16:45 Uhr',
-        title: 'Workshop: Visuals und Prototyping',
-        titleTentative: true,
       },
     ],
   },
