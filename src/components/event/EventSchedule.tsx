@@ -30,6 +30,10 @@ const days: Day[] = [
     room: 'TUM ThinkTank, Richard-Wagner-Straße 1',
     sessions: [
       {
+        time: '09:30–10:15 Uhr',
+        title: 'Registrierung der Teilnehmenden',
+      },
+      {
         time: '10:15–10:35 Uhr',
         title: 'Eröffnung des Hackathons durch MLTech e. V.',
         speaker: 'Luca Ballmann, Felicitas Bingger, Enci Huang',
@@ -180,8 +184,8 @@ const awardsCeremony: FrameworkEvent = {
   room: 'Justizpalast, Prielmayerstraße 7, 80335 München-Maxvorstadt',
 };
 
-// timetable grid covers 10:00-17:30 in 15-minute slots
-const GRID_START_MIN = 10 * 60;
+// timetable grid covers 09:30-17:30 in 15-minute slots
+const GRID_START_MIN = 9 * 60 + 30;
 const GRID_END_MIN = 17 * 60 + 30;
 const SLOT_MIN = 15;
 const TOTAL_SLOTS = (GRID_END_MIN - GRID_START_MIN) / SLOT_MIN;
@@ -212,9 +216,13 @@ const gridLine = (minutes: number) => {
   return Math.round((clamped - GRID_START_MIN) / SLOT_MIN) + 2;
 };
 
+// hour labels only mark whole hours within the grid, even when the grid
+// itself starts on a half hour (e.g. 09:30)
+const FIRST_GRID_HOUR = Math.ceil(GRID_START_MIN / 60);
+const LAST_GRID_HOUR = Math.floor(GRID_END_MIN / 60);
 const gridHours = Array.from(
-    {length: GRID_END_MIN / 60 - GRID_START_MIN / 60 + 1},
-    (_, i) => GRID_START_MIN / 60 + i,
+    {length: LAST_GRID_HOUR - FIRST_GRID_HOUR + 1},
+    (_, i) => FIRST_GRID_HOUR + i,
 );
 
 // forwards the ref to the inner, full-width grid (not the outer scroll
