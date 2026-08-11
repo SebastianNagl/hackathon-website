@@ -1,6 +1,7 @@
 import React from 'react';
 import aoShearmanLogo from '../../img/partners/AOShearman.png';
 import bayshoreLogo from '../../img/partners/Bayshore_Logotype_Dark.png';
+import elevenlabsLogo from '../../img/partners/elevenlabs.png';
 import geminiLogo from '../../img/partners/GoogleGemini.png';
 import libraLogo from '../../img/partners/Libra.jpg';
 import liquidLegalLogo from '../../img/partners/liquid_legal.png';
@@ -33,9 +34,9 @@ const partners: CurrentPartner[] = [
   {img: aoShearmanLogo, name: 'A&O Shearman', link: 'https://www.aoshearman.com/'},
   {img: stmj, name: 'Bayerisches Staatsministerium der Justiz', link: 'https://www.justiz.bayern.de/ministerium/'},
   {img: bayshoreLogo, name: 'Bayshore'},
-  {img: ltc, name: 'Legal Tech Colab', link: 'https://www.legal-tech-colab.de/'},
+  {img: ltc, name: 'Legal Tech Colab', link: 'https://legaltechcolab.com/'},
   {img: libraLogo, name: 'Libra'},
-  {img: liquidLegalLogo, name: 'Liquid Legal Institute', link: 'https://www.liquid-legal-institute.com/'},
+  {img: liquidLegalLogo, name: 'Liquid Legal Institute', link: 'https://liquid-legal-institute.com/'},
   {
     img: riLmuLogo,
     name: 'LMU RIZ',
@@ -52,6 +53,7 @@ const partners: CurrentPartner[] = [
 ];
 
 const technologyPartners: CurrentPartner[] = [
+  {img: elevenlabsLogo, name: 'ElevenLabs', link: 'https://elevenlabs.io/'},
   {img: geminiLogo, name: 'Google Gemini', link: 'https://gemini.google.com/'},
   {img: lovableLogo, name: 'Lovable', link: 'https://lovable.dev/'},
 ];

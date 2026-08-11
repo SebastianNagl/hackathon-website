@@ -33,32 +33,32 @@ import beck from '../../img/mediapartners/beck.png';
 interface Partner {
   img: string;
   name: string;
-  link: string;
+  link?: string;
   dark?: boolean;
 }
 
 const partners: Partner[] = [
   {img: stmj, name: 'Bayerisches Staatsministerium der Justiz', link: 'https://www.justiz.bayern.de/ministerium/'},
-  {img: ltc, name: 'Legal Tech Colab', link: 'https://www.legal-tech-colab.de/'},
+  {img: ltc, name: 'Legal Tech Colab', link: 'https://legaltechcolab.com/'},
   {img: openLegalTechLogo, name: 'Open Legal Tech e. V.', link: 'https://open-legal-tech.org/'},
   {img: unternehmerTUM, name: 'UnternehmerTUM GmbH', link: 'https://www.unternehmertum.de/'},
   {img: recodeLogo, name: 'recode.law e.V.', link: 'https://recode.law/'},
-  {img: liquidLegalLogo, name: 'Liquid Legal Institute e.V.', link: 'https://www.liquid-legal-institute.com/'},
+  {img: liquidLegalLogo, name: 'Liquid Legal Institute e.V.', link: 'https://liquid-legal-institute.com/'},
   {img: lmuLogo, name: 'Ludwig-Maximilians-Universität München', link: 'https://www.lmu.de/de/index.html'},
   {img: orgTrierLogo, name: 'Legal Tech Trier e.V.', link: 'https://www.legaltechtrier.de/', dark: true},
   {img: orgCologneLogo, name: 'Legal Tech Lab Cologne e.V.', link: 'https://legaltechcologne.de/'},
   {img: mlTechLogo, name: 'Munich Legal Tech Student Association e.V.', link: 'https://www.ml-tech.org/'},
-  {img: eLegalLogo, name: 'eLEGAL e.V.', link: 'https://www.elegal.technology/'},
+  {img: eLegalLogo, name: 'eLEGAL e.V.'},
   {img: tumLogo, name: 'Technische Universität München', link: 'https://www.tum.de/'},
   {img: orgFreiburg, name: 'fruit - Freiburg Recht und IT', link: 'https://freiburg-recht-und-it.de/', dark: true},
   {img: riLMU, name: 'LMU RIZ', link: 'https://www.jura.uni-muenchen.de/fakultaet/riz_neu/index.html'},
   {img: disruptLogo, name: 'disrUPt law Heidelberg e.V.', link: 'https://disrupt-law.org/'},
   {img: bucerius, name: 'Bucerius Law School', link: 'https://www.law-school.de/'},
   {img: orgAachen, name: 'Legal Tech Aachen', link: 'https://www.linkedin.com/company/legal-tech-aachen/'},
-  {img: orgGiessenLogo, name: 'JUST Legal Tech e.V.', link: 'https://www.just-legaltech.de/'},
+  {img: orgGiessenLogo, name: 'JUST Legal Tech e.V.'},
   {img: legalTechDeLogo, name: 'Legal Tech Verband Deutschland e.V.', link: 'https://www.legaltechverband.de/'},
   {img: orgFrankfurtLogo, name: 'Legal Tech Lab Frankfurt am Main e.V.', link: 'https://legaltechlab.de/'},
-  {img: orgMarburgLogo, name: 'Legal Tech Lab Marburg', link: 'https://www.legal-tech-marburg.de/'},
+  {img: orgMarburgLogo, name: 'Legal Tech Lab Marburg'},
   {img: cdpsLogo, name: 'TUM Center for Digital Public Services', link: 'https://www.tum-cdps.de/'},
   {img: orgMannheim, name: 'ltc Mannheim e.V.', link: 'https://www.ltc-mannheim.de/', dark: true},
   {img: womenInAI, name: 'Women in AI and Robotics Germany e.V.', link: 'https://www.womeninairobotics.de/'},
@@ -81,23 +81,33 @@ export class Partners extends React.Component {
 
       <div className={'pt-28 pb-4 overflow-hidden'}>
         <div className={'partners-track'}>
-          {items.map((partner, index) => (
-            <a
-              key={index}
-              href={partner.link}
-              target="_blank"
-              rel="noreferrer"
-              title={partner.name}
-              className={'flex-shrink-0 mx-4 w-40 h-20 flex items-center ' +
-                'justify-center p-2 hover:scale-105 transition-transform'}>
+          {items.map((partner, index) => {
+            const logoClassName = 'flex-shrink-0 mx-4 w-40 h-20 flex items-center ' +
+              'justify-center p-2 hover:scale-105 transition-transform';
+            const img = (
               <img
                 src={partner.img}
                 alt={partner.name}
                 className={'max-h-full max-w-full object-contain ' +
                   (partner.dark ? 'brightness-0 invert' : '')}
               />
-            </a>
-          ))}
+            );
+            return partner.link ? (
+              <a
+                key={index}
+                href={partner.link}
+                target="_blank"
+                rel="noreferrer"
+                title={partner.name}
+                className={logoClassName}>
+                {img}
+              </a>
+            ) : (
+              <div key={index} title={partner.name} className={logoClassName}>
+                {img}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>;
