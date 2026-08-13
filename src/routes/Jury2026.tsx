@@ -4,6 +4,7 @@ import '../components/event/EventTitle.css';
 import heckmann from '../img/jury/Dirk Heckmann.jpg';
 import leonardOrth from '../img/jury/Leonard Orth.jpg';
 import kaiEbert from '../img/jury/Kai Ebert.jpeg';
+import nathaliaSchomerus from '../img/jury/Nathalia Schomerus.jpeg';
 
 type JuryMember = {
   name: string
@@ -12,6 +13,7 @@ type JuryMember = {
   bulletPoints?: string[]
   linkedIn?: string
   img?: string
+  imgPosition?: string
 }
 
 const juryMembers: JuryMember[] = [
@@ -76,8 +78,20 @@ const juryMembers: JuryMember[] = [
   },
   {
     name: 'Nathalia Schomerus',
-    title: 'Weitere Informationen folgen in Kürze',
-    text: '',
+    title: 'Head of Data and Digital Services, RSM Ebner Stolz',
+    text: 'Nathalia Schomerus verantwortet als Head of Data and Digital ' +
+      'Services die interne Digitalisierung bei RSM Ebner Stolz. Zuletzt ' +
+      'war sie die Legal Innovation Lead des KI-Unternehmens Legora. ' +
+      'Zuvor baute sie als Leiterin Künstliche Intelligenz (Legal Tech) ' +
+      'bei der größten Wirtschaftskanzleien das KI-Team auf und leitete ' +
+      'es. Davor gründete sie ein Start-Up, für welches sie als "Forbes ' +
+      '30 under 30 Europe" ausgezeichnet wurde. Zuvor war sie nach ' +
+      'Abschluss ihres Studiums einige Jahre in England und Israel in ' +
+      'der Wissenschaft tätig. Nathalia studierte u.a. Jura, Theologie ' +
+      'und VWL und schloss ihr Masterstudium an der Universität Oxford ' +
+      'als Clore Graduate Scholar ab.',
+    img: nathaliaSchomerus,
+    imgPosition: 'object-top',
   },
 ];
 
@@ -105,7 +119,7 @@ export class Jury2026 extends React.Component {
                     src={member.img}
                     alt={member.name}
                     className={'w-40 h-40 lg:w-48 lg:h-48 rounded-full ' +
-                      'object-cover'}/> :
+                      'object-cover ' + (member.imgPosition || 'object-center')}/> :
                   <div className={'w-40 h-40 lg:w-48 lg:h-48 rounded-full ' +
                     'bg-blue-12 opacity-20 flex items-center justify-center ' +
                     'text-head-m font-bold text-blue-1'}>

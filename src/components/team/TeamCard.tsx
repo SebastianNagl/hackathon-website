@@ -24,7 +24,12 @@ export class TeamCard extends React.Component<Props> {
           {this.props.name}
         </div>
         <div className="text-sm opacity-80">
-          {this.props.shortDesc}
+          {this.props.shortDesc.split('\n').map((line, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && <br/>}
+              {line}
+            </React.Fragment>
+          ))}
         </div>
         <div className={classNames(
             'flex items-center mx-auto mt-auto pt-3',
