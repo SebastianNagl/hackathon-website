@@ -91,3 +91,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.benedikt-pic {
+    background: url("../../img/teamMembers/benedikt_flechsenhar.jpg") center 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

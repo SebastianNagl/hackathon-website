@@ -29,14 +29,14 @@ export class Team extends React.Component {
       members: [
         {
           name: 'Felicitas Bingger',
-          shortDesc: 'Vorstandsvorsitzende',
+          shortDesc: 'Vorstandsvorsitzende\n(MLTech e. V.)',
           email: 'felicitas.bingger@ml-tech.org',
           linkedIn: 'https://www.linkedin.com/in/felicitas-bingger-897b3b332/',
           backgroundClass: 'felicitas-pic',
         },
         {
           name: 'Luca Ballmann',
-          shortDesc: 'Vorstandsvorsitzender',
+          shortDesc: 'Vorstandsvorsitzender\n(MLTech e. V.)',
           email: 'luca.ballmann@ml-tech.org',
           linkedIn: 'https://www.linkedin.com/in/luca-j-ballmann-50807023b/',
           backgroundClass: 'luca-pic',
@@ -50,10 +50,17 @@ export class Team extends React.Component {
         },
         {
           name: 'Luis Hettrich',
-          shortDesc: 'Vorstandsmitglied',
+          shortDesc: 'Vorstandsmitglied\n(MLTech e. V.)',
           email: 'luis.hettrich@ml-tech.org',
           linkedIn: 'https://www.linkedin.com/in/luis-hettrich-26ba87296/',
           backgroundClass: 'luis-pic',
+        },
+        {
+          name: 'Benedikt Flechsenhar',
+          shortDesc: 'Technischer Koordinator',
+          email: 'benedikt.flechsenhar@legal-hackathon.de',
+          linkedIn: 'https://www.linkedin.com/in/benedikt-flechsenhar-88a185196/',
+          backgroundClass: 'benedikt-pic',
         },
       ],
     },
