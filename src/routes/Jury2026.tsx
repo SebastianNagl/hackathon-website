@@ -13,6 +13,7 @@ type JuryMember = {
   bulletPoints?: string[]
   linkedIn?: string
   img?: string
+  imgPosition?: string
 }
 
 const juryMembers: JuryMember[] = [
@@ -90,6 +91,7 @@ const juryMembers: JuryMember[] = [
       'und VWL und schloss ihr Masterstudium an der Universität Oxford ' +
       'als Clore Graduate Scholar ab.',
     img: nathaliaSchomerus,
+    imgPosition: 'object-top',
   },
 ];
 
@@ -117,7 +119,7 @@ export class Jury2026 extends React.Component {
                     src={member.img}
                     alt={member.name}
                     className={'w-40 h-40 lg:w-48 lg:h-48 rounded-full ' +
-                      'object-cover'}/> :
+                      'object-cover ' + (member.imgPosition || 'object-center')}/> :
                   <div className={'w-40 h-40 lg:w-48 lg:h-48 rounded-full ' +
                     'bg-blue-12 opacity-20 flex items-center justify-center ' +
                     'text-head-m font-bold text-blue-1'}>
