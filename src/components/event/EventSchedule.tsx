@@ -74,7 +74,7 @@ const days: Day[] = [
       {
         time: '15:00–17:00 Uhr',
         title: 'Open Table: Wie baue ich ein Start-up auf?',
-        speaker: 'Moritz Krüselmann – Moderator (Legal Tech Colab), ' +
+        speaker: 'Moritz Krüsselmann – Moderator (Legal Tech Colab), ' +
           'Henrik Volkmann (Libra), Tim Kniepkamp (Suitcase)',
       },
       {
