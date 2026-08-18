@@ -4,7 +4,6 @@ import {Footer} from '../components/footer/Footer';
 import {AbschlussveranstaltungHero} from '../components/info/AbschlussveranstaltungHero';
 import {AccessToJustice} from '../components/info/AccessToJustice';
 import {Info} from '../components/info/Info';
-import {PrizeMoney} from '../components/info/PrizeMoney';
 import {CurrentPartners} from '../components/partners/CurrentPartners';
 import {Partners} from '../components/partners/Partners';
 import {Testimonials} from '../components/testimonials/Testimonials';
@@ -28,7 +27,6 @@ export class Home extends React.Component {
   render() {
     return <div className={`App overflow-x-hidden`}>
       <Info scrollTo={this.scrollTo} />
-      <PrizeMoney />
       <AccessToJustice />
       <About scrollTo={this.scrollTo} />
       <AbschlussveranstaltungHero />
