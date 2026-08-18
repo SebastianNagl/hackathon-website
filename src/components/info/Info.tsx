@@ -2,6 +2,7 @@ import React from 'react';
 import {Caret} from '../Caret';
 import './Info.css';
 import {Greeting} from './Greeting';
+import {PrizeSticker} from './PrizeSticker';
 import {ShortInfo} from './ShortInfo';
 
 type Props = {
@@ -14,6 +15,8 @@ export class Info extends React.Component<Props, {}> {
 
       <div className={'relative pt-8 px-6 bg-red-3 flex-grow mt-28 ' +
           'md:pt-16 lg:mt-24 xl:mt-28'}>
+
+        <PrizeSticker />
 
         <div className={'m-auto flex flex-col tabletL:w-4/5'}>
 
