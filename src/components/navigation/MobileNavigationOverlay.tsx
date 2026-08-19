@@ -37,6 +37,13 @@ export class MobileNavigationOverlay extends React.Component<Props, {}> {
             Event
         </CustomLink>
         <CustomLink
+          to={'/abschlussveranstaltung'}
+          onClick={this.leaveModal}
+          className={'hover:text-blue-11'}
+        >
+            Finale
+        </CustomLink>
+        <CustomLink
           to={'/team'}
           onClick={this.leaveModal}
           className={'hover:text-blue-11'}
