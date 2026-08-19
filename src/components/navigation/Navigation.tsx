@@ -55,6 +55,12 @@ export function Navigation() {
             Event
           </CustomLink>
           <CustomLink
+            to={'/abschlussveranstaltung'}
+            className={'border-b-2 hover:text-blue-11'}
+          >
+            Finale
+          </CustomLink>
+          <CustomLink
             to={'/team'}
             className={'border-b-2 hover:text-blue-11'}
           >
