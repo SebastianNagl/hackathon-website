@@ -52,7 +52,9 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
     },
     {
       time: '10:40–10:50 Uhr',
-      title: 'Keynote',
+      title:
+        'Keynote: From Product to the Boardroom and Beyond: How to Build, Deliver, and Prove Value',
+      speaker: 'Leonard Orth',
       institution: 'Bayshore.ai',
     },
     {
@@ -62,11 +64,12 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
       institution: 'LMU',
     },
     {
-      time: '11:00–12:00 Uhr',
+      time: '11:00–12:10 Uhr',
       title: 'Pitches',
+      note: 'StMJ (I) - Was ist passiert; StMJ (III) - Wer erbt',
     },
     {
-      time: '12:00–13:30 Uhr',
+      time: '12:15–13:30 Uhr',
       title: 'Mittagessen',
       note: 'Mittagessen gesponsert von',
       sponsorLogo: bayshoreLogo,
@@ -75,6 +78,7 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
     {
       time: '13:30–15:00 Uhr',
       title: 'Pitches',
+      note: 'StMJ (II) - Was nun; StMJ (IV) - Was unterschreibe ich; Verbraucherzentrale (III)',
     },
     {
       time: '15:00–15:30 Uhr',
@@ -84,6 +88,7 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
     {
       time: '15:30–17:00 Uhr',
       title: 'Pitches',
+      note: 'Verbraucherzentrale (I); Verbraucherzentrale (II); Verbraucherzentrale (IV)',
     },
     {
       time: '17:00–17:30 Uhr',
