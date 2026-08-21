@@ -40,18 +40,23 @@ export const abschlussveranstaltungEvent: FrameworkEvent = {
   room: 'Freskensaal (LMU, Ludwigstraße 28, Raum 115)',
   sessions: [
     {
-      time: '10:15–10:35 Uhr',
+      time: '10:15–10:30 Uhr',
       title: 'Eröffnung der Abschlussveranstaltung',
       speaker: 'Luca Ballmann, Felicitas Bingger, Enci Huang',
     },
     {
-      time: '10:35–10:45 Uhr',
+      time: '10:30–10:40 Uhr',
       title: 'Grußwort',
       speaker: 'Ministerialdirektor Dr. Winfried Brechmann',
       institution: 'Bayerisches Staatsministerium der Justiz',
     },
     {
-      time: '10:45–11:00 Uhr',
+      time: '10:40–10:50 Uhr',
+      title: 'Keynote',
+      institution: 'Bayshore.ai',
+    },
+    {
+      time: '10:50–11:00 Uhr',
       title: 'Vorstellung der Jury',
       speaker: 'Dr. Ann-Kristin Mayrhofer',
       institution: 'LMU',

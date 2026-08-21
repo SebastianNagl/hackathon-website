@@ -370,12 +370,6 @@ export class EventSchedule extends React.Component<{}, {view: ViewMode}> {
     const tabInactive = 'bg-blue-3 text-blue-12 hover:bg-blue-4';
     return (
       <div className={'flex flex-col gap-10'}>
-        <div className={'bg-amber-2 border border-amber-9 rounded px-6 py-5 ' +
-          'text-text-m lg:text-text-l'}>
-          <strong>Hinweis:</strong> Slots, die noch nicht final
-          bestätigt sind, sind mit <Tentative/> gekennzeichnet.
-        </div>
-
         <div className={'flex gap-2'}>
           <button
             type={'button'}
