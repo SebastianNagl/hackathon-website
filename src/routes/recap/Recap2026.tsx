@@ -20,7 +20,7 @@ const cards: RecapCard[] = [
     to: '/recap/2026/event',
     icon: eventIcon,
     title: 'Das Event',
-    description: 'Die Programmwoche vom 18.–22. August und der Abschlusstag ' +
+    description: 'Die Programmwoche vom 17.–21. August und der Abschlusstag ' +
       'im Freskensaal der LMU.',
   },
   {
@@ -139,7 +139,7 @@ const Recap2026: React.FC = () => {
           />
 
           <p className={'text-justify'}>
-            Vom 18. bis 22. August 2026 fand in München die Programmwoche des
+            Vom 17. bis 21. August 2026 fand in München die Programmwoche des
             Legal Loves Tech Hackathon 2026 statt — fünf Tage mit Vorträgen,
             Workshops, einem Innovation Sprint, zwei Coding-Blöcken und einem
             Pitch-Training. Getragen wurde der Hackathon von MLTech gemeinsam
