@@ -1,0 +1,15 @@
+/* gentle, staggered floating for the decorative hearts in the hero */
+@keyframes hero-heart-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--heart-rot, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--heart-rot, 0deg));
+  }
+}
+
+.hero-heart {
+  animation: hero-heart-bob 4.5s ease-in-out infinite;
+  will-change: transform;
+}
