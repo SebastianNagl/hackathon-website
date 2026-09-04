@@ -6,7 +6,7 @@
         top: -40%;
         transform: scale(40%);
         right: -5%;
-        content: url("/src/img/2hearts.png") ;
+        content: url("/src/img/decor/two_hearts.png") ;
     }
 
 }
@@ -17,6 +17,6 @@
         top: -40%;
         transform: scale(90%);
         right: -5%;
-        content: url("/src/img/2hearts.png") ;
+        content: url("/src/img/decor/two_hearts.png") ;
     }
 }

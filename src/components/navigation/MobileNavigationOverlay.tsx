@@ -58,11 +58,11 @@ export class MobileNavigationOverlay extends React.Component<Props, {}> {
           Jury
         </CustomLink>
         <CustomLink
-          to={'/result'}
+          to={'/recap'}
           onClick={this.leaveModal}
           className={'hover:text-blue-11'}
         >
-          Recap LLT &apos;23
+          Recap
         </CustomLink>
         <CustomLink
           to={'/join'}

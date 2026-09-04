@@ -2,9 +2,9 @@ import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import './About.css';
 import {Caret} from '../Caret';
-import umfassendImg from '../../img/umfassend.png';
-import nonProfitImg from '../../img/nonProfit.png';
-import betreuungImg from '../../img/betreuung.png';
+import umfassendImg from '../../img/about/umfassend.png';
+import nonProfitImg from '../../img/about/non_profit.png';
+import betreuungImg from '../../img/about/betreuung.png';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

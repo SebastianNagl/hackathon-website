@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Footer} from '../components/footer/Footer';
-import GroupPicture from '../img/group_picture.png';
+import GroupPicture from '../img/misc/group_picture.png';
 
 export class Result extends React.Component {
   render() {

@@ -1,17 +1,17 @@
 #big-heart-background {
-    background: url("/src/img/bigHeart.png") no-repeat 95% 10%;
+    background: url("/src/img/decor/big_heart.png") no-repeat 95% 10%;
     background-size: 15%;
     opacity: 0;
 }
 
 #medium-heart-background {
-    background: url("/src/img/mediumHeart.png") no-repeat 82% 50%;
+    background: url("/src/img/decor/medium_heart.png") no-repeat 82% 50%;
     background-size: 10%;
     opacity: 0;
 }
 
 #small-heart-background {
-    background: url("/src/img/smallHeart.png") no-repeat 98% 60%;
+    background: url("/src/img/decor/small_heart.png") no-repeat 98% 60%;
     background-size: 7%;
     opacity: 0;
 }
@@ -34,17 +34,17 @@
 
 @media (max-width: 768px) {
     #big-heart-background {
-        background: url("/src/img/bigHeart.png") no-repeat 100% 25%;
+        background: url("/src/img/decor/big_heart.png") no-repeat 100% 25%;
         background-size: 15%;
     }
 
     #medium-heart-background {
-        background: url("/src/img/mediumHeart.png") no-repeat 85% 50%;
+        background: url("/src/img/decor/medium_heart.png") no-repeat 85% 50%;
         background-size: 10%;
     }
 
     #small-heart-background {
-        background: url("/src/img/smallHeart.png") no-repeat 100% 60%;
+        background: url("/src/img/decor/small_heart.png") no-repeat 100% 60%;
         background-size: 7%;
     }
 }
@@ -73,17 +73,17 @@
         margin-top: 2%!important;
     }
     #big-heart-background {
-        background: url("/src/img/bigHeart.png") no-repeat 90% 25%;
+        background: url("/src/img/decor/big_heart.png") no-repeat 90% 25%;
         background-size: 15%;
     }
 
     #medium-heart-background {
-        background: url("/src/img/mediumHeart.png") no-repeat 75% 55%;
+        background: url("/src/img/decor/medium_heart.png") no-repeat 75% 55%;
         background-size: 10%;
     }
 
     #small-heart-background {
-        background: url("/src/img/smallHeart.png") no-repeat 95% 60%;
+        background: url("/src/img/decor/small_heart.png") no-repeat 95% 60%;
         background-size: 7%;
     }
 }
@@ -102,17 +102,17 @@
         margin-top: 2%!important;
     }
     #big-heart-background {
-        background: url("/src/img/bigHeart.png") no-repeat 90% 25%;
+        background: url("/src/img/decor/big_heart.png") no-repeat 90% 25%;
         background-size: 15%;
     }
 
     #medium-heart-background {
-        background: url("/src/img/mediumHeart.png") no-repeat 75% 55%;
+        background: url("/src/img/decor/medium_heart.png") no-repeat 75% 55%;
         background-size: 10%;
     }
 
     #small-heart-background {
-        background: url("/src/img/smallHeart.png") no-repeat 95% 60%;
+        background: url("/src/img/decor/small_heart.png") no-repeat 95% 60%;
         background-size: 7%;
     }
 }

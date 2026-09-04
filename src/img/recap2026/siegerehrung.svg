@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Siegerehrung, alle Siegerteams">
+  <rect width="800" height="450" fill="#eef3f9"/>
+  <rect x="10" y="10" width="780" height="430" fill="none" stroke="#b6c6da" stroke-width="3" stroke-dasharray="16 12" rx="14"/>
+  <g fill="none" stroke="#93a7c0" stroke-width="5" stroke-linejoin="round">
+    <rect x="340" y="155" width="120" height="88" rx="10"/>
+    <circle cx="400" cy="201" r="20"/>
+    <path d="M340 227 l40 -34 30 26 34 -30 16 14"/>
+  </g>
+  <text x="400" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="600" fill="#5b6b82">Siegerehrung, alle Siegerteams</text>
+  <text x="400" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#93a7c0">Platzhalter &#8211; Foto folgt</text>
+</svg>

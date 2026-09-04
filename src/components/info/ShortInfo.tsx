@@ -12,7 +12,7 @@ export class ShortInfo extends React.Component {
 
       <div className={'mb-4 text-justify text-blue-12 text-text-l ' +
           'md:text-2xl lg:mt-10'}>
-        <span className={'font-bold text-blue-11'}>17.08. – 21.08.2026</span>
+        <span className={'font-bold text-blue-11'}>17.08. – 27.08.2026</span>
         {' | München. Der Legal Tech Hackathon von und für ' +
           'Studierende. Offen und inklusiv. Non-Profit. In Präsenz. Und das ' +
           'Beste: Nur dein Interesse genügt – wir bringen dir alles bei!'}
@@ -20,21 +20,13 @@ export class ShortInfo extends React.Component {
 
       <div id={'shortInfoLink'} className={'flex flex-wrap gap-4 mt-2 mb-8'}>
         <Link
-          to={'/event#ablaufplan'}
-          className={'inline-block text-white px-6 py-2 rounded font-bold ' +
-            'text-text-m hover:opacity-80 transition-opacity'}
+          to={'/recap/2026'}
+          className={'inline-flex items-center gap-2 text-white px-8 py-3 ' +
+            'rounded font-bold text-head-s hover:opacity-80 shadow-lg ' +
+            'transition-opacity'}
           style={{backgroundColor: '#0545AF'}}
         >
-          Zum Ablaufplan
-        </Link>
-
-        <Link
-          to={'/abschlussveranstaltung'}
-          className={'inline-block text-white px-6 py-2 rounded font-bold ' +
-            'text-text-m hover:opacity-80 transition-opacity'}
-          style={{backgroundColor: '#0545AF'}}
-        >
-          Als Besucher:in anmelden
+          Recap 2026 ansehen →
         </Link>
       </div>
 

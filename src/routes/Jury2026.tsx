@@ -1,10 +1,10 @@
 import React from 'react';
 import {Footer} from '../components/footer/Footer';
 import '../components/event/EventTitle.css';
-import heckmann from '../img/jury/Dirk Heckmann.jpg';
-import leonardOrth from '../img/jury/Leonard Orth.jpg';
-import kaiEbert from '../img/jury/Kai Ebert.jpeg';
-import nathaliaSchomerus from '../img/jury/Nathalia Schomerus.jpeg';
+import heckmann from '../img/jury/dirk_heckmann.jpg';
+import leonardOrth from '../img/jury/leonard_orth.jpg';
+import kaiEbert from '../img/jury/kai_ebert.jpeg';
+import nathaliaSchomerus from '../img/jury/nathalia_schomerus.jpeg';
 
 type JuryMember = {
   name: string
