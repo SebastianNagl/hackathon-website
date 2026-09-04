@@ -66,7 +66,7 @@ const days: Day[] = [
   {
     id: 'tag-1',
     weekday: 'Montag',
-    date: '18.08.2026',
+    date: '17.08.2026',
     num: 1,
     theme: 'Kick-Off — Von der Idee zur Gründung',
     slots: [
@@ -163,7 +163,7 @@ const days: Day[] = [
   {
     id: 'tag-2',
     weekday: 'Dienstag',
-    date: '19.08.2026',
+    date: '18.08.2026',
     num: 2,
     theme: 'Innovation Sprint & Rechtliche Rahmenbedingungen',
     slots: [
@@ -204,7 +204,7 @@ const days: Day[] = [
   {
     id: 'tag-3',
     weekday: 'Mittwoch',
-    date: '20.08.2026',
+    date: '19.08.2026',
     num: 3,
     theme: 'Coding trifft Verbraucherrecht',
     slots: [
@@ -244,7 +244,7 @@ const days: Day[] = [
   {
     id: 'tag-4',
     weekday: 'Donnerstag',
-    date: '21.08.2026',
+    date: '20.08.2026',
     num: 4,
     theme: 'Vibe Coding, Justiz & Venture Capital',
     slots: [
@@ -299,7 +299,7 @@ const days: Day[] = [
   {
     id: 'tag-5',
     weekday: 'Freitag',
-    date: '22.08.2026',
+    date: '21.08.2026',
     num: 5,
     theme: 'Legal Reasoning & Pitch-Training',
     slots: [
@@ -498,7 +498,7 @@ export function Recap2026Event() {
         Die Programmwoche — Fünf Tage. Fünf Perspektiven.
       </h2>
       <p className={'text-justify'}>
-        Vom 18. bis 22. August 2026 fand in München ein Programm statt, das die
+        Vom 17. bis 21. August 2026 fand in München ein Programm statt, das die
         Teilnehmenden nicht nur inspirieren, sondern tatsächlich befähigen
         sollte, funktionierende Legal-Tech-Lösungen zu entwickeln: mit den
         Werkzeugen, dem rechtlichen Fundament und dem Mindset, das es braucht,
@@ -603,7 +603,7 @@ export function Recap2026Event() {
               Abschlussveranstaltung
             </span>
             <span className={'text-text-m opacity-70'}>
-              Mittwoch, 27.08.2026 · Freskensaal der LMU
+              Donnerstag, 27.08.2026 · Freskensaal der LMU
             </span>
           </div>
           <p className={'text-justify'}>
