@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="280" viewBox="0 0 440 280" role="img" aria-label="Rechtliche Rahmenbedingungen">
+  <rect width="440" height="280" fill="#eef3f9"/>
+  <rect x="8" y="8" width="424" height="264" fill="none" stroke="#b6c6da" stroke-width="2.5" stroke-dasharray="12 9" rx="12"/>
+  <g fill="none" stroke="#9badc4" stroke-width="4" stroke-linejoin="round">
+    <rect x="176" y="88" width="88" height="64" rx="8"/>
+    <circle cx="220" cy="116" r="14"/>
+    <path d="M176 138 l30 -26 22 19 25 -22 11 10"/>
+  </g>
+  <text x="220" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="600" fill="#5b6b82">Rechtliche Rahmenbedingungen</text>
+  <text x="220" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#9badc4">Platzhalter &#8211; Foto folgt</text>
+</svg>

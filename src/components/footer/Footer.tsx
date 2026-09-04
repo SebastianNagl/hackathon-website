@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import invertedBlackWhiteLogo from '../../img/lltLogos/logo-bw-inverted.svg';
 import blackWhiteLogo from '../../img/lltLogos/logo-bw.svg';
-import bayernWappen from '../../img/bayern_wappen.png';
+import bayernWappen from '../../img/decor/bayern_wappen.png';
 import {ContactDetails} from './ContactDetails';
 
 import './Footer.css';
@@ -67,7 +67,7 @@ export class Footer extends React.Component<Props, {}> {
               <li><a href={'/event'}>Event</a></li>
               <li><a href={'/team'}>Team</a></li>
               <li><a href={'/jury'}>Jury</a></li>
-              <li><a href={'/result'}>Recap LLT &apos;23</a></li>
+              <li><a href={'/recap'}>Recap</a></li>
               <li><a href={'/join'}>Mitmachen</a></li>
             </ul>
           </div>

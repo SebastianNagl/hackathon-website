@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="405" viewBox="0 0 720 405" role="img" aria-label="Pitches in drei Bloecken">
+  <rect width="720" height="405" fill="#eef3f9"/>
+  <rect x="9" y="9" width="702" height="387" fill="none" stroke="#b6c6da" stroke-width="2.5" stroke-dasharray="14 10" rx="12"/>
+  <g fill="none" stroke="#9badc4" stroke-width="4.5" stroke-linejoin="round">
+    <rect x="310" y="142" width="100" height="74" rx="9"/>
+    <circle cx="360" cy="174" r="16"/>
+    <path d="M310 198 l34 -30 25 22 29 -25 12 11"/>
+  </g>
+  <text x="360" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="600" fill="#5b6b82">Pitches in drei Bloecken</text>
+  <text x="360" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#9badc4">Platzhalter &#8211; Foto folgt</text>
+</svg>

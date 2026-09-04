@@ -16,7 +16,8 @@ export class TeamCard extends React.Component<Props> {
   render() {
     return <div className="bg-blue-2 rounded relative select-none flex flex-col h-full">
       <div
-        className={'w-full h-60 rounded-t flex-shrink-0 ' +
+        style={{height: '25rem', minHeight: '25rem'}}
+        className={'w-full rounded-t flex-shrink-0 bg-cover bg-center ' +
           this.props.backgroundClass}>
       </div>
       <div className="text-center p-4 pb-5 bg-blue-2 rounded-b flex flex-col flex-grow">

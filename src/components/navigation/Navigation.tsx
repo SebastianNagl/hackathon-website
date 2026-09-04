@@ -3,7 +3,6 @@ import {CustomLink} from './CustomLink';
 import coloredLogo from '../../img/lltLogos/logo-colored.svg';
 import {MenuButton} from './MenuButton';
 import {MobileNavigationOverlay} from './MobileNavigationOverlay';
-import {Banner} from './Banner';
 
 
 export function Navigation() {
@@ -73,10 +72,10 @@ export function Navigation() {
             Jury
           </CustomLink>
           <CustomLink
-            to={'/result'}
+            to={'/recap'}
             className={'border-b-2 hover:text-blue-11'}
           >
-            Recap LLT &apos;23
+            Recap
           </CustomLink>
           <CustomLink
             to={'/join'}
@@ -89,6 +88,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-    <Banner />
   </div>;
 }

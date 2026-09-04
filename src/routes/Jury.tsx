@@ -7,10 +7,10 @@ import 'swiper/css/navigation';
 import {Footer} from '../components/footer/Footer';
 
 import sarah from '../img/teamMembers/sarah.png';
-import matthias from '../img/MGrabmair.jpg';
+import matthias from '../img/people/m_grabmair.jpg';
 import annSophie from '../img/teamMembers/ann_sophie.png';
-import nicole from '../img/NicoleFormicaSchiller.png';
-import kirsten from '../img/KirstenRulf.png';
+import nicole from '../img/people/nicole_formica_schiller.png';
+import kirsten from '../img/people/kirsten_rulf.png';
 
 //
 type JuryMember = {
@@ -137,7 +137,7 @@ export class Jury extends React.Component {
       <div className={'flex flex-col grow pt-8 grow mb-6 lg:mb-0 mt-20 ' +
           'tabletL:mt-24 xl:mt-28 relative'}>
 
-        <Link to={'/result'}
+        <Link to={'/recap/2023'}
           className={'absolute top-24 left-6 tabletL:left-10 text-blue-12' +
             ' opacity-70 hover:opacity-100 transition-opacity text-sm font-medium'}>
           ← Zurück zum Recap

@@ -56,7 +56,7 @@ export class Team2023 extends React.Component {
       <div className={'flex flex-col grow pt-8 grow mb-6 lg:mb-0 mt-20 ' +
           'tabletL:mt-24 xl:mt-28 relative'}>
 
-        <Link to={'/result'}
+        <Link to={'/recap/2023'}
           className={'absolute top-24 left-6 tabletL:left-10 text-blue-12' +
             ' opacity-70 hover:opacity-100 transition-opacity text-sm font-medium'}>
           ← Zurück zum Recap

@@ -5,7 +5,7 @@
 }
 
 .matthias-pic {
-    background: url("../img/MGrabmair.jpg") 40% 15%;
+    background: url("../img/people/m_grabmair.jpg") 40% 15%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -17,13 +17,13 @@
 }
 
 .nicole-pic {
-    background: url("../img/NicoleFormicaSchiller.png") 40% 15%;
+    background: url("../img/people/nicole_formica_schiller.png") 40% 15%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .kirsten-pic {
-    background: url("../img/KirstenRulf.png") 40% 15%;
+    background: url("../img/people/kirsten_rulf.png") 40% 15%;
     background-size: cover;
     background-repeat: no-repeat;
 }

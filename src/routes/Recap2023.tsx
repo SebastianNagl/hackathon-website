@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Footer} from '../components/footer/Footer';
 import {Caret} from '../components/Caret';
-import groupPicture from '../img/group_picture.png';
+import groupPicture from '../img/misc/group_picture.png';
 import eventIcon from '../img/icons/event_repeat.svg';
 import teamIcon from '../img/icons/diversity_3.svg';
 import juryIcon from '../img/icons/editor_choice.svg';
@@ -62,7 +62,7 @@ const Recap2023: React.FC = () => {
             'w-full xl:w-4/5 xl:mx-auto'}>
 
             {/* Das Event */}
-            <Link to={'/result/event'} className={'no-underline'}>
+            <Link to={'/recap/2023/event'} className={'no-underline'}>
               <div className={'bg-blue-4 rounded h-full p-8 flex flex-col ' +
                 'gap-4 hover:bg-blue-5 transition-colors'}>
                 <img src={eventIcon} alt=""
@@ -77,7 +77,7 @@ const Recap2023: React.FC = () => {
             </Link>
 
             {/* Das Team */}
-            <Link to={'/result/team'} className={'no-underline'}>
+            <Link to={'/recap/2023/team'} className={'no-underline'}>
               <div className={'bg-blue-4 rounded h-full p-8 flex flex-col ' +
                 'gap-4 hover:bg-blue-5 transition-colors'}>
                 <img src={teamIcon} alt=""
@@ -92,7 +92,7 @@ const Recap2023: React.FC = () => {
             </Link>
 
             {/* Die Jury */}
-            <Link to={'/result/jury'} className={'no-underline'}>
+            <Link to={'/recap/2023/jury'} className={'no-underline'}>
               <div className={'bg-blue-4 rounded h-full p-8 flex flex-col ' +
                 'gap-4 hover:bg-blue-5 transition-colors'}>
                 <img src={juryIcon} alt=""
@@ -141,8 +141,8 @@ const Recap2023: React.FC = () => {
 
           <p className={'text-justify'}>
             Eine Woche voller Legal Tech für jedermann – so lautete das
-            ambitionierte Ziel des Legal Loves Tech Hackathons (LLT), der vom
-            2. bis 8. Januar 2023 stattfand. Neben der Bewältigung einer
+            ambitionierte Ziel des zweiten Legal Loves Tech Hackathons (LLT),
+            der vom 2. bis 8. Januar 2023 stattfand. Neben der Bewältigung einer
             Hackathonaufgabe wurde ein umfassendes Rahmenprogramm mit Workshops,
             Vorträgen und weiteren Challenges geboten, sodass jede:r unabhängig
             von Vorkenntnissen und Interessensschwerpunkten einen Zugang zum
