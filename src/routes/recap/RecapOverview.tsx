@@ -14,7 +14,7 @@ const editions: RecapEdition[] = [
   {
     year: '2026',
     to: '/recap/2026',
-    dateRange: 'Der dritte LLT-Hackathon',
+    dateRange: '17. – 27.08.2026 · München · 51 Teilnehmende · 14 Teams',
     description:
       'Zehn Tage, 51 Teilnehmende, 14 Teams, eine Frage: Wie machen wir ' +
       'Recht zugänglicher — für alle?',
