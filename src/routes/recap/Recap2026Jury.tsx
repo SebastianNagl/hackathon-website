@@ -153,11 +153,6 @@ export function Recap2026Jury() {
           </div>
         ))}
       </div>
-
-      <p className={'text-text-s opacity-70 mt-2'}>
-        Herzlichen Dank an alle vier Juror:innen für ihre Zeit, ihre Expertise
-        und die mehr als sorgfältige Bewertung aller Teams.
-      </p>
     </RecapSubpageLayout>
   );
 }
